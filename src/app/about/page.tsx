@@ -7,22 +7,22 @@ import { MdCircle } from 'react-icons/md'
 import Image from 'next/image'
 import { CardsList } from '../../components/CardsList'
 
+const comeFromLeftAnimation = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0 }
+}
+
+const comeFromRightAnimation = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { opacity: 1, x: 0 }
+}
+
+const comeFromBottomAnimation = {
+  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, y: 0 }
+}
+
 export default function About () {
-  const comeFromLeftAnimation = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 }
-  }
-
-  const comeFromRightAnimation = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 }
-  }
-
-  const comeFromBottomAnimation = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 }
-  }
-
   return (
     <div className='pb-12 mx-auto w-10/12'>
       <Section
