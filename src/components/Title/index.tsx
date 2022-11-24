@@ -8,11 +8,11 @@ export function Title ({ children, ...props }: TitleProps) {
   const { className, ...rest } = props
 
   const classes = className?.includes('text-')
-    ? `${className ? className : ''} font-bold text-orange-500`
-    : `${className ? className : ''} text-4xl font-bold text-orange-500`
+    ? `${className ? className : ''}`
+    : `${className ? className : ''} text-4xl`
 
   return (
-    <h1 className={classes} {...rest}>
+    <h1 className={`${classes} font-bold text-orange-500`} {...rest}>
       {children}
     </h1>
   )
