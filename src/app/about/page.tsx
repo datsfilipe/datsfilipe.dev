@@ -24,9 +24,9 @@ const comeFromBottomAnimation = {
 
 export default function About () {
   return (
-    <div className='pb-12 mx-auto w-10/12'>
+    <div className='pb-12 mx-auto w-10/12 max-md:w-11/12'>
       <Section
-        className='max-lg:flex-col [&>*]:mt-12 max-xl:mt-10'
+        className='max-lg:flex-col items-center [&>*]:mt-12 max-xl:mt-10'
         variants={comeFromBottomAnimation}
       >
         <Image
@@ -41,13 +41,13 @@ export default function About () {
           <Title className='font-serif'>
             I&apos;m Filipe Lima, a Front-end Web Developer working remotely from Brazil.
           </Title>
-          <Paragraph className='mt-10 text-lg text-neutral-700 dark:text-neutral-200'>
+          <Paragraph className='mt-7 text-xl max-lg:mt-6 max-md:text-lg text-neutral-700 dark:text-neutral-200'>
             I&apos;m a product-focused Developer based in Brazil. I love solving problems and building rich interfaces to allow users to have the best experience possible with the solutions I make.
           </Paragraph>
-          <Paragraph className='mt-10 text-lg text-neutral-700 dark:text-neutral-200'>
+          <Paragraph className='mt-7 text-xl max-lg:mt-4 max-md:text-lg text-neutral-700 dark:text-neutral-200'>
             As a programmer, I&apos;m about to finish my first professional year, at that time I&apos;m building together with another partner a website that allows people to find and allocate buffets for events. I&apos;m currently working for a local agency.
           </Paragraph>
-          <Paragraph className='mt-10 text-lg text-neutral-700 dark:text-neutral-200'>
+          <Paragraph className='mt-7 text-xl max-lg:mt-4 max-md:text-lg text-neutral-700 dark:text-neutral-200'>
             I&apos;ve plans on graduating and goals to achieve. I think the best way to finish things is committing yourself till the end. Other than programming and Linux stuff, I like history, movies and games.
           </Paragraph>
         </div>
@@ -57,7 +57,7 @@ export default function About () {
         variants={comeFromLeftAnimation}
       >
         <Title className='mb-10 ml-auto font-serif w-fit'>
-          A brief history (being written)
+          Experience
         </Title>
         <CardsList listId={0}>
           <Card>

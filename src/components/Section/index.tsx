@@ -11,7 +11,7 @@ export function Section ({ children, ...props }: SectionProps & MotionProps) {
   const { className, variants, ...rest } = props
 
   return (
-    <motion.section className={`flex items-center min-h-screen ${className ? className : ''}`} {...rest}>
+    <motion.section className={`flex min-h-screen ${className ? className : ''}`} {...rest}>
       {children?.map((child: ReactNode, index: number) => (
         <motion.div
           key={index}
