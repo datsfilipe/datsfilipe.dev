@@ -17,9 +17,7 @@ export default function Page() {
           <h1 className='ml-2'>Brazil, Porto Franco - MA</h1>
         </div>
       </div>
-      <div className='overflow-hidden absolute w-screen h-screen text-base opacity-50 select-none text-stone-400 dark:text-stone-700'>
-        <BadApple />
-      </div>
+      <BadApple />
     </div>
   )
 }
