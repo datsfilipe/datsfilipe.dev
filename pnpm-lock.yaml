@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@datsfilipe/react-bad-apple': ^1.1.0
-  '@next/font': ^13.0.4
   '@sendgrid/mail': ^7.7.0
   '@types/node': 18.11.9
   '@types/react': ^18.0.17
@@ -25,7 +24,6 @@ specifiers:
 
 dependencies:
   '@datsfilipe/react-bad-apple': 1.1.0_react@18.2.0
-  '@next/font': 13.0.4
   '@sendgrid/mail': 7.7.0
   eslint-config-next: 13.0.2_wyqvi574yv7oiwfeinomdzmc3m
   framer-motion: 7.6.4_biqbaboplfbrettd7655fr4n2y
@@ -174,10 +172,6 @@ packages:
     resolution: {integrity: sha512-W+fIIIaFU7Kct7Okx91C7XDRGolv/w2RUenX2yZFeeNVcuVzDIKUcNmckrYbYcwrNQUSXmtwrs3g8xwast0YtA==}
     dependencies:
       glob: 7.1.7
-    dev: false
-
-  /@next/font/13.0.4:
-    resolution: {integrity: sha512-csZhVqe870p7XE03WfbDLzjVwdBAWxe6/lWGQosfqY/XN5tsmfDLpj442veicfCiiuF7/ydSnAAJxH8PQVBVWQ==}
     dev: false
 
   /@next/swc-android-arm-eabi/13.0.2:
