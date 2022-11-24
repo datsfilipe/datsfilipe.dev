@@ -133,7 +133,7 @@ export default function About () {
             </div>
             <div className='w-full'>
               <em className='flex flex-wrap'>
-                React Bad Apple -&nbsp;<CustomLink href='https://github.com/datsfilipe/react-bad-apple' target='_blank'>Repository</CustomLink>
+                React Bad Apple -&nbsp;<CustomLink href='http://react-bad-apple.vercel.app/' target='_blank'>Repository</CustomLink>
               </em>
               <Paragraph className='mt-2 mb-2'>
                 It&apos;s an npm package that allows user to transform frame images into an ascii playable component and use alongside React projects.
@@ -152,7 +152,7 @@ export default function About () {
             </div>
             <div className='w-full'>
               <em className='flex flex-wrap'>
-                Ignews -&nbsp;<CustomLink href='https://github.com/datsfilipe/ignews' target='_blank'>Repository</CustomLink>
+                Ignews -&nbsp;<CustomLink href='https://ignews-datsfilipe.vercel.app/' target='_blank'>Repository</CustomLink>
               </em>
               <Paragraph className='mt-2 mb-2'>
                 I&apos;s an news in post format app. It was made with a lot of cool technologies and librarys, such as Stripe, Next Auth, PrismicCMS, FaunaDB, etc. The focus was learning about CSR (Client Side Rendering), SSR (Server Side Rendering) and SSG (Static Site Generation).
@@ -171,7 +171,7 @@ export default function About () {
             </div>
             <div className='w-full'>
               <em className='flex flex-wrap'>
-                React Jokenpo -&nbsp;<CustomLink href='https://github.com/datsfilipe/react-jokenpo' target='_blank'>Repository</CustomLink>
+                React Jokenpo -&nbsp;<CustomLink href='https://react-jokenpo-alpha.vercel.app/' target='_blank'>Repository</CustomLink>
               </em>
               <Paragraph className='mt-2 mb-2'>
                 I&apos;s an rock, scissor, paper game kind of different. In this game you pick up your winner and see if it stands up until the end. I was inspired by an random gif that I saw at internet, hope you like.
