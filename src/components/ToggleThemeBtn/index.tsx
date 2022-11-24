@@ -3,6 +3,15 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { HiSun, HiMoon } from 'react-icons/hi'
 
+const variants = {
+  light: {
+    rotate: 0
+  },
+  dark: {
+    rotate: 360
+  }
+}
+
 export function ToggleThemeBtn () {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof localStorage !== 'undefined') {
@@ -17,15 +26,6 @@ export function ToggleThemeBtn () {
 
     return 'light'
   })
-
-  const variants = {
-    light: {
-      rotate: 0
-    },
-    dark: {
-      rotate: 360
-    }
-  }
 
   const toggleTheme = () => {
     if (theme === 'light') {

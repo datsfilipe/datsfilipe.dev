@@ -1,21 +1,21 @@
 'use client'
 import { Toaster } from 'react-hot-toast'
 
-export function Toast() {
-  const getTheme = () => {
-    if (typeof localStorage !== 'undefined') {
-      const themeInfo = localStorage.getItem('theme-info') as 'light' | 'dark'
-      if (themeInfo) return themeInfo
-    }
-
-    if (typeof window !== 'undefined') {
-      const themeInfo = window.matchMedia('(prefers-color-scheme: dark)')
-      if (themeInfo.matches) return 'dark'
-    }
-
-    return 'light'
+const getTheme = () => {
+  if (typeof localStorage !== 'undefined') {
+    const themeInfo = localStorage.getItem('theme-info') as 'light' | 'dark'
+    if (themeInfo) return themeInfo
   }
 
+  if (typeof window !== 'undefined') {
+    const themeInfo = window.matchMedia('(prefers-color-scheme: dark)')
+    if (themeInfo.matches) return 'dark'
+  }
+
+  return 'light'
+}
+
+export function Toast() {
   return (
     <Toaster
       position='bottom-center'
