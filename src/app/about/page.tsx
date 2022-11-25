@@ -52,7 +52,7 @@ export default function About () {
         </div>
       </Section>
       <Section
-        className='flex-col mx-auto mt-12 max-w-[50rem]'
+        className='flex-col mx-auto mt-12 max-w-[90%] max-lg:max-w-[100%]'
         variants={comeFromLeftAnimation}
       >
         <Title className='mb-10 ml-auto font-serif w-fit'>
@@ -86,7 +86,7 @@ export default function About () {
         </CardsList>
       </Section>
       <Section
-        className='flex-col mx-auto mt-12 max-w-[50rem]'
+        className='flex-col mx-auto mt-12 max-w-[90%] max-lg:max-w-[100%]'
         variants={comeFromRightAnimation}
       >
         <Title className='mr-auto mb-10 font-serif w-fit'>
