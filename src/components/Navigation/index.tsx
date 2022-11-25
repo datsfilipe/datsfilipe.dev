@@ -89,7 +89,7 @@ export function Navigation () {
 
   return (
     <div className='flex absolute right-0 left-0 justify-center items-center mx-auto h-full font-medium w-fit'>
-      <nav className='flex items-center h-full'>
+      <nav className='flex items-center h-full text-base max-sm:text-sm'>
         <ul
           className='flex relative'
           onMouseLeave={() => {
@@ -118,11 +118,15 @@ export function Navigation () {
             }}
             ref={navigationButtons.home}
           >
-            <Link href='/'>
+            <Link
+              href='/'
+              aria-label='Home'
+              title='Home'
+            >
               {
                 pathname === '/' && screenSize < 768 ? (
-                  <FaCircle className='mt-1 text-base text-stone-400 dark:text-zinc-600' />
-                ) : 'Beginning'
+                  <FaCircle className='mt-1 text-stone-400 dark:text-zinc-600' />
+                ) : 'Home'
               }
             </Link>
           </li>
@@ -134,10 +138,14 @@ export function Navigation () {
             }}
             ref={navigationButtons.about}
           >
-            <Link href='/about'>
+            <Link
+              href='/about'
+              aria-label='About'
+              title='About'
+            >
               {
                 pathname === '/about' && screenSize < 768 ? (
-                  <FaCircle className='mt-1 text-base text-stone-400 dark:text-zinc-600' />
+                  <FaCircle className='mt-1 max-sm:text-sm text-stone-400 dark:text-zinc-600' />
                 ) : 'About'
               }
             </Link>
@@ -150,10 +158,14 @@ export function Navigation () {
             }}
             ref={navigationButtons.contact}
           >
-            <Link href='/contact'>
+            <Link
+              href='/contact'
+              aria-label='Contact'
+              title='Contact'
+            >
               {
                 pathname === '/contact' && screenSize < 768 ? (
-                  <FaCircle className='mt-1 text-base text-stone-400 dark:text-zinc-600' />
+                  <FaCircle className='mt-1 text-stone-400 dark:text-zinc-600' />
                 ) : 'Contact'
               }
             </Link>

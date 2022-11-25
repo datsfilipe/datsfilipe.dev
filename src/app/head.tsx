@@ -4,6 +4,8 @@ export default function Head () {
       <meta charSet="UTF-8" />
       <title>datsfilipe</title>
       <link rel="icon" href="/icon.png" type="image/png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="Filipe's personal website" />
@@ -17,6 +19,13 @@ export default function Head () {
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://datsfilipe.dev" />
       <meta property="twitter:image" content="https://datsfilipe.dev/og-image.png" />
+
+      {/* @ts-ignore */}
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" precedence="default" />
+      {/* @ts-ignore */}
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" precedence="default" />
+      {/* @ts-ignore */}
+      <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" precedence="default" />
     </>
   )
 }
