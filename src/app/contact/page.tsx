@@ -51,6 +51,7 @@ export default function Contact () {
             placeholder='datsfilipe.dev@gmail.com'
             onChange={(e) => setEmail({ ...email, email: e.target.value })}
             value={email?.email || ''}
+            aria-label='Your email'
             required
           />
           <label htmlFor='message' className='font-serif text-lg font-medium'>Your message:</label>
@@ -61,9 +62,17 @@ export default function Contact () {
             placeholder='Hello...'
             onChange={(e) => setEmail({ ...email, message: e.target.value })}
             value={email?.message || ''}
+            aria-label='Your message'
             required
           />
-          <Button className='ml-auto' type='submit'>
+          <Button
+            className='ml-auto'
+            type='submit'
+            aria-label='Send email'
+            aria-disabled={email?.email && email?.message ? false : true}
+            title={email?.email && email?.message ? 'Send email' : 'Fill in all fields'}
+            disabled={email?.email && email?.message ? false : true}
+          >
             Send
           </Button>
         </form>

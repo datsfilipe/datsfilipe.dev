@@ -50,7 +50,8 @@ export function ToggleThemeBtn () {
     <div className='flex justify-between items-center p-1 rounded-xl w-fit bg-stone-300 dark:bg-neutral-700'>
       <motion.button
         onClick={toggleTheme}
-        aria-label='Toggle Theme'
+        aria-label='Toggle dark theme'
+        title='Toggle dark theme'
         className='flex justify-center items-center p-2 mr-1 bg-amber-100 rounded-lg dark:text-neutral-50 dark:bg-neutral-700'
         variants={variants}
         initial='light'
@@ -61,7 +62,8 @@ export function ToggleThemeBtn () {
       </motion.button>
       <motion.button
         onClick={toggleTheme}
-        aria-label='Toggle Theme'
+        aria-label='Toggle light theme'
+        title='Toggle light theme'
         className='flex justify-center items-center p-2 rounded-lg dark:bg-gray-400 bg-stone-300 dark:text-neutral-900'
         variants={variants}
         initial='light'

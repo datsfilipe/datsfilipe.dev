@@ -118,7 +118,11 @@ export function Navigation () {
             }}
             ref={navigationButtons.home}
           >
-            <Link href='/'>
+            <Link
+              href='/'
+              aria-label='Home'
+              title='Home'
+            >
               {
                 pathname === '/' && screenSize < 768 ? (
                   <FaCircle className='mt-1 text-stone-400 dark:text-zinc-600' />
@@ -134,7 +138,11 @@ export function Navigation () {
             }}
             ref={navigationButtons.about}
           >
-            <Link href='/about'>
+            <Link
+              href='/about'
+              aria-label='About'
+              title='About'
+            >
               {
                 pathname === '/about' && screenSize < 768 ? (
                   <FaCircle className='mt-1 max-sm:text-sm text-stone-400 dark:text-zinc-600' />
@@ -150,7 +158,11 @@ export function Navigation () {
             }}
             ref={navigationButtons.contact}
           >
-            <Link href='/contact'>
+            <Link
+              href='/contact'
+              aria-label='Contact'
+              title='Contact'
+            >
               {
                 pathname === '/contact' && screenSize < 768 ? (
                   <FaCircle className='mt-1 text-stone-400 dark:text-zinc-600' />

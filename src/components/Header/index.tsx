@@ -12,6 +12,8 @@ export function Header () {
           className='ml-3 text-xl transition-all hover:text-2xl hover:text-orange-500 max-sm:ml-2 max-sm:text-lg max-lg:ml-0 text-stone-600 dark:text-neutral-300 hover:dark:text-orange-500'
           target='_blank'
           rel='noreferrer'
+          aria-label='Github'
+          title='Github'
         >
           <FaGithub />
         </a>
@@ -20,6 +22,8 @@ export function Header () {
           className='ml-3 text-xl transition-all hover:text-2xl hover:text-orange-500 max-sm:ml-2 max-sm:text-lg text-stone-600 dark:text-neutral-300 hover:dark:text-orange-500'
           target='_blank'
           rel='noreferrer'
+          aria-label='Linkedin'
+          title='Linkedin'
         >
           <FaLinkedin />
         </a>
@@ -28,6 +32,8 @@ export function Header () {
           className='ml-3 text-xl transition-all hover:text-2xl hover:text-orange-500 max-sm:ml-2 max-sm:text-lg text-stone-600 dark:text-neutral-300 hover:dark:text-orange-500'
           target='_blank'
           rel='noreferrer'
+          aria-label='Twitter'
+          title='Twitter'
         >
           <FaTwitter />
         </a>

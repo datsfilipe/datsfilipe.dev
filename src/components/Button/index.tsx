@@ -3,6 +3,7 @@ import type { ReactNode, HTMLAttributes } from 'react'
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export function Button ({ children, ...props }: ButtonProps) {
@@ -15,7 +16,7 @@ export function Button ({ children, ...props }: ButtonProps) {
   return (
     <button
       {...rest}
-      className={`${classes} flex items-center text-lg font-medium rounded-xl transition-all hover:brightness-90 hover:cursor-pointer w-fit bg-stone-300 border border-stone-400 dark:border-stone-500 text-neutral-900 dark:text-stone-300 dark:bg-neutral-700`}
+      className={`${classes} flex items-center text-lg font-medium rounded-xl transition-all hover:brightness-90 hover:cursor-pointer w-fit bg-stone-300 border border-stone-400 dark:border-stone-500 text-neutral-900 dark:text-stone-300 dark:bg-neutral-700 disabled:cursor-not-allowed disabled:brightness-90`}
     >
       {children}
     </button> 
