@@ -1,5 +1,5 @@
 'use client'
-import { BadApple as BadAppleComponent } from '@datsfilipe/react-bad-apple'
+import { BadApple as BadAppleComponent } from '@datsfilipe/react-bad-apple/dist/esm'
 import { Button } from '../Button'
 import { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
