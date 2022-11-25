@@ -18,7 +18,7 @@ export function Section ({ children, ...props }: SectionProps & MotionProps) {
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-          transition={{ delay: index * 0.1, duration: 0.5 }}
+          transition={{ delay: index * 0.1, duration: 0.2 }}
           variants={variants}
         >
           {child}
