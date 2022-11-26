@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default function Head () {
   return (
     <>
@@ -20,12 +21,21 @@ export default function Head () {
       <meta property="twitter:url" content="https://datsfilipe.dev" />
       <meta property="twitter:image" content="https://datsfilipe.dev/og-image.png" />
 
-      {/* @ts-ignore */}
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" precedence="default" />
-      {/* @ts-ignore */}
-      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" precedence="default" />
-      {/* @ts-ignore */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" precedence="default" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet"
+        precedence="default"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap"
+        rel="stylesheet"
+        precedence="default"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+        rel="stylesheet"
+        precedence="default"
+      />
     </>
   )
 }
