@@ -19,6 +19,11 @@ const inter = localFont({
       path: '../assets/fonts/Inter/inter-v12-latin-regular.woff2',
       weight: '400',
       style: 'normal'
+    },
+    {
+      path: '../assets/fonts/Inter/inter-v12-latin-500.woff2',
+      weight: '500',
+      style: 'normal'
     }
   ]
 })
