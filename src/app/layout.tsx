@@ -16,7 +16,7 @@ const inter = localFont({
   variable: '--inter-font',
   src: [
     {
-      path: '../../public/fonts/Inter/inter-v12-latin-regular.woff2',
+      path: '../assets/fonts/Inter/inter-v12-latin-regular.woff2',
       weight: '400',
       style: 'normal'
     }
@@ -27,12 +27,12 @@ const merriweather = localFont({
   variable: '--merriweather-font',
   src: [
     {
-      path: '../../public/fonts/Merriweather/merriweather-v30-latin-regular.woff2',
+      path: '../assets/fonts/Merriweather/merriweather-v30-latin-regular.woff2',
       weight: '400',
       style: 'normal'
     },
     {
-      path: '../../public/fonts/Merriweather/merriweather-v30-latin-700.woff2',
+      path: '../assets/fonts/Merriweather/merriweather-v30-latin-700.woff2',
       weight: '700',
       style: 'normal'
     }
@@ -43,7 +43,7 @@ const mplus = localFont({
   variable: '--mplus-font',
   src: [
     {
-      path: '../../public/fonts/M-PLUS-Rounded-1c/m-plus-rounded-1c-v15-latin-700.woff2',
+      path: '../assets/fonts/M-PLUS-Rounded-1c/m-plus-rounded-1c-v15-latin-700.woff2',
       weight: '700',
       style: 'normal'
     }
