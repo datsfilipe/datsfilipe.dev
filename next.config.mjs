@@ -8,7 +8,20 @@ const nextConfig = {
   images: {
     domains: ['avatars.githubusercontent.com']
   },
-  swcMinify: false
+  swcMinify: false,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Encoding',
+            value: 'brotli'
+          },
+        ]
+      }
+    ]
+  }
 }
 
 export default nextConfig

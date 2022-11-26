@@ -11,12 +11,6 @@ export default function Head () {
       <meta name="author" content="datsfilipe" />
       <meta name="keywords" content="filipe, datsfilipe, personal, website" />
 
-      <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-      <meta httpEquiv='Content-Style-Type' content='text/css' />
-      <meta httpEquiv='Content-Script-Type' content='text/javascript' />
-
-      <meta httpEquiv='Content-Encoding' content='gzip' />
-
       <meta property="og:title" content="datsfilipe" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://datsfilipe.dev" />
