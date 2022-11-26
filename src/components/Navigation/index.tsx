@@ -11,7 +11,11 @@ type Dimensions = {
 }
 
 export function Navigation () {
-  const pathname = usePathname()
+  let pathname = ''
+  // avoid react hydration mismatch
+  if (typeof window !== 'undefined') {
+    pathname = usePathname()
+  }
 
   const [screenSize, setScreenSize] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0)
   const [motionDivPosition, setMotionDivPosition] = useState<Dimensions>({
