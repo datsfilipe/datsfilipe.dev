@@ -104,7 +104,7 @@ export function Navigation () {
             })
           }}
         >
-          <motion.div
+          <motion.li
             className='absolute self-center h-8 bg-opacity-50 rounded-md dark:bg-opacity-50 bg-stone-400 -z-10 dark:bg-zinc-600' 
             variants={variants}
             initial='initial'
