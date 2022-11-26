@@ -12,7 +12,7 @@ export function Title ({ children, ...props }: TitleProps) {
     : `${className ? className : ''} text-4xl`
 
   return (
-    <h1 className={`${classes} font-bold text-orange-500`} {...rest}>
+    <h1 className={`${classes} font-bold text-orange-700 dark:text-orange-600`} {...rest}>
       {children}
     </h1>
   )
