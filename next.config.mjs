@@ -18,6 +18,14 @@ const nextConfig = {
             key: 'Content-Encoding',
             value: 'brotli'
           },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: 'object-src \'none\'; base-uri \'none\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\''
+          },
         ]
       }
     ]
