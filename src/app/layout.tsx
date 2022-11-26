@@ -1,4 +1,4 @@
-import { Inter, Merriweather, M_PLUS_Rounded_1c } from '@next/font/google'
+import localFont from '@next/font/local'
 
 import { Toast } from '../components/Toast'
 
@@ -12,21 +12,42 @@ interface RootLayoutProps {
   children: ReactElement;
 }
 
-const inter = Inter({
+const inter = localFont({
   variable: '--inter-font',
-  style: 'normal'
+  src: [
+    {
+      path: '../../public/fonts/Inter/inter-v12-latin-regular.woff2',
+      weight: '400',
+      style: 'normal'
+    }
+  ]
 })
 
-const merriweather = Merriweather({
+const merriweather = localFont({
   variable: '--merriweather-font',
-  weight: ['400', '700'],
-  style: ['normal', 'italic']
+  src: [
+    {
+      path: '../../public/fonts/Merriweather/merriweather-v30-latin-regular.woff2',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/Merriweather/merriweather-v30-latin-700.woff2',
+      weight: '700',
+      style: 'normal'
+    }
+  ]
 })
 
-const mplus = M_PLUS_Rounded_1c({
+const mplus = localFont({
   variable: '--mplus-font',
-  weight: '700',
-  style: 'normal'
+  src: [
+    {
+      path: '../../public/fonts/M-PLUS-Rounded-1c/m-plus-rounded-1c-v15-latin-700.woff2',
+      weight: '700',
+      style: 'normal'
+    }
+  ]
 })
 
 export default function RootLayout({ children }: RootLayoutProps) {
