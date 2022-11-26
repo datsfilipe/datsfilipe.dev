@@ -34,6 +34,7 @@ export default function About () {
           width={500}
           height={500}
           alt='Filipe Lima, me.'
+          loading='eager'
           className='rounded-3xl shadow-lg transition-all hover:shadow-xl shadow-neutral-800 dark:shadow-black dark:hover:shadow-black hover:shadow-neutral-800'
         />
         <div className='ml-12 max-xl:max-w-3xl max-2xl:max-w-4xl max-lg:ml-0'>
