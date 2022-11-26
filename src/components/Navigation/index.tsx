@@ -11,11 +11,8 @@ type Dimensions = {
 }
 
 export function Navigation () {
-  let pathname = ''
-  // avoid react hydration mismatch
-  if (typeof window !== 'undefined') {
-    pathname = usePathname()
-  }
+  const [pathname, setPathname] = useState<string>('')
+  const pathnameValueFromHook = usePathname()
 
   const [screenSize, setScreenSize] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0)
   const [motionDivPosition, setMotionDivPosition] = useState<Dimensions>({
@@ -90,6 +87,10 @@ export function Navigation () {
       setScreenSize(window.innerWidth)
     })
   }, [])
+
+  useEffect(() => {
+    setPathname(pathnameValueFromHook)
+  }, [pathnameValueFromHook])
 
   return (
     <div className='flex absolute right-0 left-0 justify-center items-center mx-auto h-full font-medium w-fit'>
