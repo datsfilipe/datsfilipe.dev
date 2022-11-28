@@ -13,7 +13,7 @@ interface AboutCardProps {
 }
 
 export function AboutCard ({ title, reference, tags, year, children }: AboutCardProps) {
-  const [ titlePiece, referencePiece ] = title.split('-')
+  const [ titlePiece, referencePiece ] = title.split(' - ')
 
   return (
     <Card>
@@ -22,7 +22,7 @@ export function AboutCard ({ title, reference, tags, year, children }: AboutCard
       </div>
       <div className='w-full'>
         <em className='flex flex-wrap'>
-          {titlePiece}&nbsp;<CustomLink href={reference} target='_blank'>{referencePiece}</CustomLink>
+          {titlePiece} -&nbsp;<CustomLink href={reference} target='_blank'>{referencePiece}</CustomLink>
         </em>
         <Paragraph className='mt-2 mb-2'>
           {children}

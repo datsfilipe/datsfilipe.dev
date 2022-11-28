@@ -108,7 +108,7 @@ export default function About () {
             reference='https://ignews-datsfilipe.vercel.app/'
             tags={['React', 'Next.js', 'Typescript', 'Jest']}
           >
-            I&apos;s an news in post format app. It was made with a lot of cool technologies and librarys, such as Stripe, Next Auth, PrismicCMS, FaunaDB, etc. The focus was learning about CSR (Client Side Rendering), SSR (Server Side Rendering) and SSG (Static Site Generation).
+            It&apos;s an news in post format app. It was made with a lot of cool technologies and librarys, such as Stripe, Next Auth, PrismicCMS, FaunaDB, etc. The focus was learning about CSR (Client Side Rendering), SSR (Server Side Rendering) and SSG (Static Site Generation).
           </AboutCard>
           <AboutCard
             year='2022'
@@ -116,7 +116,7 @@ export default function About () {
             reference='https://react-jokenpo-alpha.vercel.app/'
             tags={['React', 'Context API', 'Typescript', 'Vite']}
           >
-            I&apos;s an rock, scissor, paper game kind of different. In this game you pick up your winner and see if it stands up until the end. I was inspired by an random gif that I saw at internet, hope you like.
+            It&apos;s an rock, scissor, paper game kind of different. In this game you pick up your winner and see if it stands up until the end. I was inspired by an random gif that I saw at internet, hope you like.
           </AboutCard>
           <AboutCard  
             year='2022'
