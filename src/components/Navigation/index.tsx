@@ -23,7 +23,8 @@ export function Navigation () {
   const navigationButtons = {
     home: useRef<HTMLLIElement>(null),
     about: useRef<HTMLLIElement>(null),
-    contact: useRef<HTMLLIElement>(null)
+    contact: useRef<HTMLLIElement>(null),
+    posts: useRef<HTMLLIElement>(null)
   }
 
   const initialPosition = () => {
@@ -153,6 +154,23 @@ export function Navigation () {
                   <FaCircle className='mt-1 max-sm:text-sm text-stone-400 dark:text-zinc-600' />
                 ) : 'About'
               }
+            </Link>
+          </li>
+          <li
+            className='flex items-center mx-5 h-full max-md:mx-2'
+            onMouseOver={() => {
+              if (!navigationButtons.posts.current) return
+              setMotionDivPosition({ x: navigationButtons.posts.current.offsetLeft, w: navigationButtons.posts.current.offsetWidth })
+            }}
+            ref={navigationButtons.posts}
+          >
+            <Link
+              href='https://dev.to/datsfilipe'
+              aria-label='Posts'
+              title='Posts'
+              target='_blank'
+            >
+              Posts
             </Link>
           </li>
           <li
