@@ -9,7 +9,12 @@ module.exports = withTV({
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-raleway)', 'serif'],
+      },
+    },
   },
   plugins: [],
 })

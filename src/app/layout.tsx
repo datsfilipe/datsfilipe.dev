@@ -1,28 +1,27 @@
 import { Providers } from './providers'
-import { Navigation } from '@/components/navigation'
-import { ToggleTheme } from '@/components/toggleTheme'
 
 import './globals.css'
 import { Inter, Raleway } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
-const raleway = Raleway({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--font-raleway',
+})
 
 export const metadata = {
   title: 'datsfilipe',
-  description: 'Filipe Lima personal website.',
+  description: 'Filipe Lima social links.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${inter.className} ${raleway.className}`}>
+      <body className={`${inter.variable} ${raleway.variable}`}>
         <Providers>
-          <Navigation>
-            <li>
-              <ToggleTheme />
-            </li>
-          </Navigation>
           {children}
         </Providers>
       </body>
