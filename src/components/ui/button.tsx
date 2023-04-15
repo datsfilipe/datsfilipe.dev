@@ -1,14 +1,17 @@
 import { tv } from 'tailwind-variants'
 
 type ButtonProps = {
-  children: React.ReactNode
   use?: 'primary' | 'danger' | 'link' | 'buttonLink'
   rounded?: 'sm' | 'md' | 'lg' | 'full'
-} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'>
+  href?: string
+  target?: string
+  noreferrer?: boolean
+  className?: never
+} & React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>
 
-export const Button = ({ children, use = 'buttonLink', rounded = 'md', ...props }: ButtonProps) => {
+export const Button = ({ children, use = 'primary', rounded = 'md', ...props }: ButtonProps) => {
   const button = tv({
-    base: 'font-bold py-2 px-4',
+    base: 'font-bold py-2 px-4 flex items-center',
     variants: {
       type: {
         primary: 'dark:bg-zinc-700 dark:text-white bg-zinc-300 text-black',
@@ -24,6 +27,14 @@ export const Button = ({ children, use = 'buttonLink', rounded = 'md', ...props 
       },
     },
   })
+
+  if (use === 'link' || use === 'buttonLink') {
+    return (
+      <a className={button({ type: use, rounded })} {...props}>
+        {children}
+      </a>
+    )
+  }
 
   return (
     <button className={button({ type: use, rounded })} {...props}>
