@@ -37,6 +37,9 @@ dependencies:
   react-icons:
     specifier: ^4.8.0
     version: 4.8.0(react@18.2.0)
+  tailwind-variants:
+    specifier: ^0.1.2
+    version: 0.1.2(tailwindcss@3.3.1)
   tailwindcss:
     specifier: 3.3.1
     version: 3.3.1(postcss@8.4.21)
@@ -2358,6 +2361,20 @@ packages:
     dependencies:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
+    dev: false
+
+  /tailwind-merge@1.12.0:
+    resolution: {integrity: sha512-Y17eDp7FtN1+JJ4OY0Bqv9OA41O+MS8c1Iyr3T6JFLnOgLg3EvcyMKZAnQ8AGyvB5Nxm3t9Xb5Mhe139m8QT/g==}
+    dev: false
+
+  /tailwind-variants@0.1.2(tailwindcss@3.3.1):
+    resolution: {integrity: sha512-MOTaBS5Hg7RN/M0tlMZCUD1crDGPlHe7XsFS7+I5bc4hfwQPVuTiPiRqivW9xH/0QvtuVo8AlEwvR2uxSC3phw==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 1.12.0
+      tailwindcss: 3.3.1(postcss@8.4.21)
     dev: false
 
   /tailwindcss@3.3.1(postcss@8.4.21):

@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const { withTV } = require('tailwind-variants/transformer')
+
+module.exports = withTV({
   darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -10,4 +12,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+})
