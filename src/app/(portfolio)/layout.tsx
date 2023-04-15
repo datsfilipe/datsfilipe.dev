@@ -1,5 +1,4 @@
 import { Navigation } from '@/components/navigation'
-import { ToggleTheme } from '@/components/toggleTheme'
 
 export const metadata = {
   title: 'datsfilipe',
@@ -8,13 +7,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Navigation>
-        <li>
-          <ToggleTheme />
-        </li>
-      </Navigation>
+    <div className="flex justify-center items-center py-2 mx-auto max-w-4xl min-h-screen">
       {children}
-    </>
+      <Navigation/>
+    </div>
   )
 }
