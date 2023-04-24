@@ -1,3 +1,4 @@
+import type { IconType } from 'react-icons'
 import {
   TbSun,
   TbMoon,
@@ -11,9 +12,22 @@ import {
   TbCoffee,
   TbWorld,
   TbFileText,
+  TbHome,
+  TbWritingSign,
+  TbMessage,
+  TbBrandTypescript,
+  TbStar,
+  TbTerminal,
+  TbLanguage,
 } from 'react-icons/tb'
 
-export const Icons = {
+import { SiLua } from 'react-icons/si'
+
+type IconsType = {
+  [key: string]: IconType
+}
+
+export const Icons: IconsType = {
   Sun: TbSun,
   Moon: TbMoon,
   Github: TbBrandGithub,
@@ -26,4 +40,12 @@ export const Icons = {
   Coffee: TbCoffee,
   World: TbWorld,
   FileText: TbFileText,
+  Home: TbHome,
+  WritingSign: TbWritingSign,
+  Message: TbMessage,
+  Typescript: TbBrandTypescript,
+  Star: TbStar,
+  Shell: TbTerminal,
+  Language: TbLanguage,
+  Lua: SiLua,
 }
