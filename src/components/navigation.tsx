@@ -1,12 +1,13 @@
 import { tv } from 'tailwind-variants'
 import Link from 'next/link'
+import { Icons } from '@/components/icons'
 import { ToggleTheme } from '@/components/toggleTheme'
 
 const navigationVariants = tv({
   slots: {
-    nav: 'flex items-center justify-between flex-wrap p-2',
+    nav: 'flex items-center justify-between flex-wrap p-4',
     ul: 'list-reset flex flex-col ml-4',
-    item: 'inline-block mb-4 font-serif font-medium text-lg text-gray-400 hover:text-gray-200 transition-colors duration-200',
+    item: '[&>a]:flex [&>a]:items-center [&>a>svg]:mr-2 mb-4 font-serif font-medium text-lg text-gray-400 hover:text-gray-200 transition-colors duration-200',
   },
 })
 
@@ -15,13 +16,22 @@ export const Navigation = () => {
     <nav className={navigationVariants().nav()}>
       <ul className={navigationVariants().ul()}>
         <li className={navigationVariants().item()}>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <Icons.Home />
+            Home
+          </Link>
         </li>
         <li className={navigationVariants().item()}>
-          <Link href="/blog">Blog</Link>
+          <Link href="/blog">
+            <Icons.WritingSign />
+            Blog
+          </Link>
         </li>
         <li className={navigationVariants().item()}>
-          <Link href="/guestbook">Guestbook</Link>
+          <Link href="/guestbook">
+            <Icons.Message />
+            Guestbook
+          </Link>
         </li>
         <li>
           <ToggleTheme />
