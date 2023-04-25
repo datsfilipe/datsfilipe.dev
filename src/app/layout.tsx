@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${inter.variable} ${raleway.variable}`}>
+      <body className={`${inter.variable} ${raleway.variable} selection:bg-zinc-400 selection:bg-opacity-30`}>
         <Providers>
           {children}
         </Providers>
