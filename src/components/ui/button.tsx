@@ -4,8 +4,6 @@ type ButtonProps = {
   use?: 'primary' | 'danger' | 'link' | 'buttonLink'
   rounded?: 'sm' | 'md' | 'lg' | 'full'
   href?: string
-  target?: string
-  noreferrer?: boolean
   className?: never
 } & React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>
 
@@ -16,8 +14,8 @@ export const Button = ({ children, use = 'primary', rounded = 'md', ...props }: 
       type: {
         primary: 'dark:bg-zinc-700 dark:text-white bg-zinc-300 text-black',
         danger: 'bg-red-500 text-white',
-        link: 'bg-transparent text-zinc-700 dark:text-white',
-        buttonLink: 'dark:bg-zinc-700 dark:text-white bg-zinc-300 text-black',
+        link: 'bg-transparent text-zinc-700 dark:text-gray-400 hover:text-zinc-500 dark:hover:text-gray-300 duration-200 ease-in-out transition-colors',
+        buttonLink: 'dark:bg-zinc-700 dark:text-white bg-zinc-300 text-black hover:scale-105 duration-200 ease-in-out transition-transform',
       },
       rounded: {
         sm: 'rounded-sm',
@@ -30,7 +28,7 @@ export const Button = ({ children, use = 'primary', rounded = 'md', ...props }: 
 
   if (use === 'link' || use === 'buttonLink') {
     return (
-      <a className={button({ type: use, rounded })} {...props}>
+      <a className={button({ type: use, rounded })} {...props} target="_blank" rel="noreferrer noopener">
         {children}
       </a>
     )
