@@ -1,7 +1,9 @@
+'use client'
 import { tv } from 'tailwind-variants'
 import Link from 'next/link'
 import { Icons } from '@/components/icons'
 import { ToggleTheme } from '@/components/toggleTheme'
+import { usePathname } from 'next/navigation'
 
 const navigationVariants = tv({
   slots: {
@@ -12,22 +14,24 @@ const navigationVariants = tv({
 })
 
 export const Navigation = () => {
+  let pathname = usePathname() || '/'
+
   return (
     <nav className={navigationVariants().nav()}>
       <ul className={navigationVariants().ul()}>
-        <li className={navigationVariants().item()}>
+        <li className={navigationVariants().item() + (pathname === '/' ? ' text-gray-200' : '')}>
           <Link href="/">
             <Icons.Home />
             Home
           </Link>
         </li>
-        <li className={navigationVariants().item()}>
+        <li className={navigationVariants().item() + (pathname === '/blog' ? ' text-gray-200' : '')}>
           <Link href="/blog">
             <Icons.WritingSign />
             Blog
           </Link>
         </li>
-        <li className={navigationVariants().item()}>
+        <li className={navigationVariants().item() + (pathname === '/guestbook' ? ' text-gray-200' : '')}>
           <Link href="/guestbook">
             <Icons.Message />
             Guestbook
