@@ -1,6 +1,9 @@
 import { FeaturedRepos } from '@/components/featuredRepos'
 import Image from 'next/image'
 import { tv } from 'tailwind-variants'
+import { Button } from '@/components/ui/button'
+import { Icons } from '@/components/icons'
+import Link from 'next/link'
 
 const homeVariants = tv({
   slots: {
@@ -20,12 +23,14 @@ export default function Home() {
       <div className={homeVariants().container()}>
         <div className={homeVariants().inlined()}>
           <div className={homeVariants().icon()}>
-            <Image
-              src="https://github.com/datsfilipe.png"
-              alt="Filipe's avatar"
-              priority
-              fill
-            />
+            <Link href='/bio'>
+              <Image
+                src="https://github.com/datsfilipe.png"
+                alt="Filipe's avatar"
+                fill
+                priority
+              />
+            </Link>
           </div>
           <div className='flex flex-col justify-center items-center'>
             <h1 className={homeVariants().title()}>Filipe Lima</h1>
