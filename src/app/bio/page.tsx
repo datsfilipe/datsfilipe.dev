@@ -2,6 +2,7 @@ import { tv } from 'tailwind-variants'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
+import Link from 'next/link'
 
 const bioVariants = tv({
   slots: {
@@ -18,12 +19,14 @@ export default function Bio() {
   return (
     <main className={bioVariants().main()}>
       <div className={bioVariants().icon()}>
-        <Image
-          src="https://github.com/datsfilipe.png"
-          alt="Filipe's avatar"
-          priority
-          fill
-        />
+        <Link href='/'>
+          <Image
+            src="https://github.com/datsfilipe.png"
+            alt="Filipe's avatar"
+            priority
+            fill
+          />
+        </Link>
       </div>
       <div className="flex flex-col items-center">
         <h1 className={bioVariants().title()}>Filipe Lima</h1>
@@ -33,48 +36,36 @@ export default function Bio() {
         <Button
           use="link"
           href="https://github.com/datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Github />
         </Button>
         <Button
           use="link"
           href="https://twitter.com/datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Twitter />
         </Button>
         <Button
           use="link"
           href="https://www.linkedin.com/in/datsfilipe/"
-          target="_blank"
-          noreferrer
         >
           <Icons.Linkedin />
         </Button>
         <Button
           use="link"
           href="https://www.reddit.com/user/datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Reddit />
         </Button>
         <Button
           use="link"
           href="mailto:datsfilipe.pro@proton.me"
-          target="_blank"
-          noreferrer
         >
           <Icons.Mail />
         </Button>
         <Button
           use="link"
           href="https://www.youtube.com/@datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Youtube />
         </Button>
@@ -83,8 +74,6 @@ export default function Bio() {
         <Button
           use="buttonLink"
           href="https://datsfilipe.dev"
-          target="_blank"
-          noreferrer
         >
           <Icons.World />
           &nbsp;Portfolio
@@ -92,8 +81,6 @@ export default function Bio() {
         <Button
           use="buttonLink"
           href="https://github.com/sponsors/datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Heart />
           &nbsp;Sponsor me on GitHub
@@ -101,8 +88,6 @@ export default function Bio() {
         <Button
           use="buttonLink"
           href="https://ko-fi.com/datsfilipe"
-          target="_blank"
-          noreferrer
         >
           <Icons.Coffee />
           &nbsp;Buy me a coffee
@@ -110,8 +95,6 @@ export default function Bio() {
         <Button
           use="buttonLink"
           href="https://datsfilipe.dev/cv"
-          target="_blank"
-          noreferrer
         >
           <Icons.FileText />
           &nbsp;Download my CV
