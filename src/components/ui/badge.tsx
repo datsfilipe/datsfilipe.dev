@@ -1,7 +1,5 @@
 import { tv } from 'tailwind-variants'
 
-type HexColor = `#${string}`
-
 type BadgeProps = {
   items: { object: React.ReactNode, text?: string | number }[]
   children?: React.ReactNode
@@ -9,9 +7,9 @@ type BadgeProps = {
 
 const badgeVariants = tv({
   slots: {
-    container: 'flex flex-row justify-center items-center rounded-2xl bg-zinc-800 overflow-hidden',
-    item: 'flex flex-row justify-center items-center text-md h-8 bg-black text-gray-400 px-2',
-    content: 'text-md font-sans font-medium px-4',
+    container: 'flex flex-row justify-center items-center h-10 rounded-md border-[1px] border-zinc-700 overflow-hidden',
+    item: 'flex flex-row justify-center items-center text-lg bg-black text-gray-400 px-2',
+    content: 'text-md font-sans px-4',
   },
 })
 
