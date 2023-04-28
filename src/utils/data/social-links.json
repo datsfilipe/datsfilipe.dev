@@ -1,0 +1,50 @@
+{
+  "noContext": [
+    {
+      "link": "https:\/\/github.com\/datsfilipe",
+      "icon": "Github"
+    },
+    {
+      "link": "https:\/\/twitter.com\/datsfilipe",
+      "icon": "Twitter"
+    },
+    {
+      "link": "https:\/\/www.linkedin.com\/in\/datsfilipe\/",
+      "icon": "Linkedin"
+    },
+    {
+      "link": "https:\/\/www.reddit.com\/user\/datsfilipe",
+      "icon": "Reddit"
+    },
+    {
+      "link": "mailto:datsfilipe@skiff.com",
+      "icon": "Mail"
+    },
+    {
+      "link": "https:\/\/www.youtube.com\/@datsfilipe",
+      "icon": "Youtube"
+    }
+  ],
+  "context": [
+    {
+      "link": "https:\/\/datsfilipe.dev",
+      "icon": "World",
+      "title": "Portfolio"
+    },
+    {
+      "link": "https:\/\/github.com\/sponsors\/datsfilipe",
+      "icon": "Heart",
+      "title": "Sponsor me on GitHub"
+    },
+    {
+      "link": "https:\/\/ko-fi.com\/datsfilipe",
+      "icon": "Coffee",
+      "title": "Buy me a coffee"
+    },
+    {
+      "link": "https:\/\/datsfilipe.dev\/cv",
+      "icon": "FileText",
+      "title": "Download my CV"
+    }
+  ]
+}
