@@ -56,7 +56,7 @@ If you find any issues or have suggestions for improvements, please feel free to
 
 ## Credits
 
-- [@leerob](https://github.com/leerob) for the blog and og image setup of his [website](https://github.com/leerob/leerob.io), which I used as a template for my own blog.
+- [@leerob](https://github.com/leerob) for the blog and og image setup of his [website](https://github.com/leerob/leerob.io), which I used as a template for my own.
 - And thank you for visiting my website!
 
 <div align="center">
