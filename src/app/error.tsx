@@ -1,14 +1,11 @@
-'use client'; // Error components must be Client components
-
+'use client'
 import { useEffect } from 'react'
 import { Error as ErrorComponent } from '@/components/error'
 
 export default function Error({
   error,
-  reset,
 }: {
   error: Error;
-  reset: () => void;
 }) {
   useEffect(() => {
     console.error(error)
@@ -20,12 +17,9 @@ export default function Error({
         <h2 className="mb-4 font-serif text-2xl font-bold">
           Something went wrong!
         </h2>
-        <button
-          onClick={() => reset()}
-          className="py-2 px-4 text-white bg-red-700 rounded-xl hover:bg-red-600"
-        >
-          Try resetting
-        </button>
+        <p className="text-gray-700 dark:text-gray-400">
+          Maybe you want to reload the page? 😅
+        </p>
       </ErrorComponent>
     </div>
   )
