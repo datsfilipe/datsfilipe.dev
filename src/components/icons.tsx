@@ -21,6 +21,11 @@ import {
   TbStar,
   TbTerminal,
   TbLanguage,
+  TbCheckbox,
+  TbX,
+  TbError404,
+  TbUser,
+  TbMenu2
 } from 'react-icons/tb'
 
 import { SiLua } from 'react-icons/si'
@@ -52,4 +57,9 @@ export const Icons: IconsType = {
   Shell: TbTerminal,
   Language: TbLanguage,
   Lua: SiLua,
+  Checkbox: TbCheckbox,
+  X: TbX,
+  Error404: TbError404,
+  User: TbUser,
+  Menu: TbMenu2
 }
