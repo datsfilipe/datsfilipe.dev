@@ -1,7 +1,7 @@
 import { Providers } from './providers'
+import { Inter, Raleway } from 'next/font/google'
 
 import './globals.css'
-import { Inter, Raleway } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
