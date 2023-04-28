@@ -34,7 +34,7 @@ export async function GET(request: Request) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundImage: 'url(http://localhost:3000/og-bg.png)',
+          backgroundImage: 'url(https://datsfilipe.dev/og-bg.png)',
         }}
       >
         <div
