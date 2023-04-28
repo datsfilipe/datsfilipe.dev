@@ -20,9 +20,7 @@ const config = {
   rules: {
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-floating-promises': 'off',
-    '@typescript-eslint/require-await': 'off',
+    'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'warn',
       {

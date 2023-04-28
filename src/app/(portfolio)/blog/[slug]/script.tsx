@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 
-const Script = ({ data }: { data: Object }) => {
+const Script = ({ data }: { data: object }) => {
   useEffect(() => {
     const script = document.createElement('script')
     script.type = 'application/ld+json'

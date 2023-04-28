@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 'use client'
 import { useEffect, useState } from 'react'
 

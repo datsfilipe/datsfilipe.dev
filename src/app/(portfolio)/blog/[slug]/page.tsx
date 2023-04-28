@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Mdx } from '@/components/mdx'
@@ -73,6 +74,8 @@ export default async function Post({ params }: { params: { slug: string }}) {
     notFound()
   }
 
+  const tweetIds = post.tweetIds as string[]
+
   return (
     <section className={blogPostVariants().section()}>
       <Script data={post.structuredData} />
@@ -90,7 +93,7 @@ export default async function Post({ params }: { params: { slug: string }}) {
           timeZone: 'UTC'
         }).format(new Date(post.publishedAt))}
       </div>
-      <Mdx code={post.body.code} tweetIds={post.tweetIds} />
+      <Mdx code={post.body.code} tweetIds={tweetIds} />
     </section>
   )
 }

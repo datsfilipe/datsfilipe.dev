@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 import { allBlogs } from 'contentlayer/generated'
 
 export default async function sitemap() {
