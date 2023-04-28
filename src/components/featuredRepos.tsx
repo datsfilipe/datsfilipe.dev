@@ -2,6 +2,7 @@ import { tv } from 'tailwind-variants'
 import { Badge } from '@/components/ui/badge'
 import { Icons } from '@/components/icons'
 import { Error } from '@/components/error'
+import hiddenReposData from '@/utils/data/hidden-repos.json'
 
 type Repository = {
   name: string
@@ -19,13 +20,13 @@ const getRepos = async (username: string): Promise<Repository[]> => {
     stars: repo.stargazers_count,
     language: repo.language || 'default',
     url: repo.html_url
-  })).filter(repo => repo.language.toLowerCase() !== 'scss').sort((a, b) => b.stars - a.stars).slice(0, 6) : []
+  })).filter(repo => !hiddenReposData.includes(repo.name)).sort((a, b) => b.stars - a.stars).slice(0, 6) : []
 }
 
 const featuredReposVariants = tv({
   slots: {
     container: 'flex flex-col items-end w-full',
-    title: 'my-6 font-serif text-2xl font-bold text-gray-400',
+    title: 'my-6 font-serif text-2xl font-bold text-gray-600 dark:text-gray-400',
     list: 'flex flex-row flex-wrap justify-center items-center w-full'
   }
 })

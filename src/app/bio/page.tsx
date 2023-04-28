@@ -1,8 +1,18 @@
 import { tv } from 'tailwind-variants'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
 import Link from 'next/link'
+import socialLinksData from '@/utils/data/social-links.json'
+import aboutMeData from '@/utils/data/about-me.json'
+
+export const revalidate = 86400 // 24 hours
+
+export const metadata: Metadata = {
+  title: 'datsfilipe | bio',
+  description: 'Social links, contact information and more about Filipe Lima.',
+}
 
 const bioVariants = tv({
   slots: {
@@ -15,90 +25,48 @@ const bioVariants = tv({
   }
 })
 
+const Icon = (name: string) => {
+  const Icon = Icons[name]
+  return <Icon />
+}
+
 export default function Bio() {
   return (
     <main className={bioVariants().main()}>
-      <div className={bioVariants().icon()}>
-        <Link href='/'>
-          <Image
-            src="https://github.com/datsfilipe.png"
-            alt="Filipe's avatar"
-            priority
-            fill
-          />
-        </Link>
-      </div>
+      <Link href='/' className={bioVariants().icon()}>
+        <Image
+          src="https://github.com/datsfilipe.png"
+          alt="Filipe's avatar"
+          priority
+          fill
+        />
+      </Link>
       <div className="flex flex-col items-center">
-        <h1 className={bioVariants().title()}>Filipe Lima</h1>
-        <p className={bioVariants().description()}>Software Engineer Student</p>
+        <h1 className={bioVariants().title()}>{aboutMeData.name}</h1>
+        <p className={bioVariants().description()}>{aboutMeData.title}</p>
       </div>
       <div className={bioVariants().horizontalList()}>
-        <Button
-          use="link"
-          href="https://github.com/datsfilipe"
-        >
-          <Icons.Github />
-        </Button>
-        <Button
-          use="link"
-          href="https://twitter.com/datsfilipe"
-        >
-          <Icons.Twitter />
-        </Button>
-        <Button
-          use="link"
-          href="https://www.linkedin.com/in/datsfilipe/"
-        >
-          <Icons.Linkedin />
-        </Button>
-        <Button
-          use="link"
-          href="https://www.reddit.com/user/datsfilipe"
-        >
-          <Icons.Reddit />
-        </Button>
-        <Button
-          use="link"
-          href="mailto:datsfilipe.pro@proton.me"
-        >
-          <Icons.Mail />
-        </Button>
-        <Button
-          use="link"
-          href="https://www.youtube.com/@datsfilipe"
-        >
-          <Icons.Youtube />
-        </Button>
+        {socialLinksData.noContext.map((item) => (
+          <Button
+            use="link"
+            href={item.link}
+            key={item.icon}
+          >
+            {Icon(item.icon)}
+          </Button>
+        ))}
       </div>
       <div className={bioVariants().verticalList()}>
-        <Button
-          use="buttonLink"
-          href="https://datsfilipe.dev"
-        >
-          <Icons.World />
-          &nbsp;Portfolio
-        </Button>
-        <Button
-          use="buttonLink"
-          href="https://github.com/sponsors/datsfilipe"
-        >
-          <Icons.Heart />
-          &nbsp;Sponsor me on GitHub
-        </Button>
-        <Button
-          use="buttonLink"
-          href="https://ko-fi.com/datsfilipe"
-        >
-          <Icons.Coffee />
-          &nbsp;Buy me a coffee
-        </Button>
-        <Button
-          use="buttonLink"
-          href="https://datsfilipe.dev/cv"
-        >
-          <Icons.FileText />
-          &nbsp;Download my CV
-        </Button>
+        {socialLinksData.context.map((item) => (
+          <Button
+            use="buttonLink"
+            href={item.link}
+            key={item.icon}
+          >
+            {Icon(item.icon)}
+            &nbsp;{item.title}
+          </Button>
+        ))}
       </div>
     </main>
   )
