@@ -46,7 +46,7 @@ const ViewCounter = ({
 
   return (
     <p className="font-sans text-sm text-neutral-500">
-      {views ? `${views} views` : '​'}
+      {views !== null ? `${views} views` : '​'}
     </p>
   )
 }
