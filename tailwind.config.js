@@ -7,6 +7,7 @@ module.exports = withTV({
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
+    './content/**/*.mdx',
   ],
   theme: {
     extend: {
@@ -14,7 +15,18 @@ module.exports = withTV({
         sans: ['var(--font-inter)', 'sans-serif'],
         serif: ['var(--font-raleway)', 'serif'],
       },
+      typography: {
+        quoteless: {
+          css: {
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:first-of-type::after': { content: 'none' },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  plugins: [require('@tailwindcss/typography')],
 })
