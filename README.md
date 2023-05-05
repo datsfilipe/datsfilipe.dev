@@ -52,7 +52,7 @@ This is the repository for my personal website, [datsfilipe.dev](https://datsfil
 
 ## Contributing
 
-If you find any issues or have suggestions for improvements, please feel free to create a pull request or open an issue.
+If you find any issues or have suggestions for improvements, feel free to create a pull request or open an issue.
 
 ## Credits
 
