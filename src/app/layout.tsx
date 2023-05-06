@@ -1,7 +1,7 @@
 import { Providers } from './providers'
+import { appVariants } from '@/styles/appVariants'
 import { Inter, Raleway } from 'next/font/google'
-
-import './globals.css'
+import '@/styles/global.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${inter.variable} ${raleway.variable} selection:bg-zinc-400 selection:bg-opacity-30`}>
+      <body className={appVariants.app() + ` ${inter.variable} ${raleway.variable}`}>
         <Providers>
           {children}
         </Providers>
