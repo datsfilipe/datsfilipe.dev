@@ -24,7 +24,6 @@ This is the repository for my personal website, [datsfilipe.dev](https://datsfil
 - **React.js**
 - **TailwindCSS**
 - **TypeScript**
-- **Planetscale**
 - **Contentlayer**
 
 ## Getting Started

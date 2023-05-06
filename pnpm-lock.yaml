@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@planetscale/database':
-    specifier: ^1.7.0
-    version: 1.7.0
   contentlayer:
     specifier: ^0.3.2
     version: 0.3.2(esbuild@0.17.18)

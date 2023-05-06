@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@planetscale/database": "^1.7.0",
     "contentlayer": "^0.3.2",
     "dotenv": "^16.0.3",
     "eslint": "8.38.0",
