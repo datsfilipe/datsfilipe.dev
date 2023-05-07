@@ -25,7 +25,8 @@ import {
   TbX,
   TbError404,
   TbUser,
-  TbMenu2
+  TbMenu2,
+  TbRss
 } from 'react-icons/tb'
 
 import { SiLua } from 'react-icons/si'
@@ -61,5 +62,6 @@ export const Icons: IconsType = {
   X: TbX,
   Error404: TbError404,
   User: TbUser,
-  Menu: TbMenu2
+  Menu: TbMenu2,
+  Rss: TbRss,
 }
