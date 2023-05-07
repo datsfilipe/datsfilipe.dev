@@ -9,7 +9,7 @@ const badgeVariants = tv({
   slots: {
     container: 'flex flex-row justify-center items-center h-10 rounded-md border-[1px] border-zinc-500 dark:border-zinc-700 overflow-hidden hover:border-zinc-500 transition-colors duration-200',
     item: 'flex flex-row justify-center items-center text-lg bg-white dark:bg-black text-gray-600 dark:text-gray-400 px-2',
-    content: 'text-md font-sans px-4',
+    content: 'text-md font-primary px-4',
   },
 })
 

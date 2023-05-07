@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants'
 
 const app = tv({
   base: [
-    'font-sans',
+    'font-primary',
     'selection:bg-zinc-400',
     'selection:bg-opacity-30',
   ],
@@ -77,7 +77,7 @@ const field = tv({
     'shadow',
     'focus:bg-neutral-800',
     'dark:focus:bg-neutral-200',
-    'font-sans',
+    'font-primary',
   ],
 })
 
@@ -101,7 +101,7 @@ const paragraph = tv({
   extend: text,
   base: [
     'text-md',
-    'font-sans',
+    'font-primary',
   ],
 })
 
@@ -129,7 +129,7 @@ const label = tv({
   extend: text,
   base: [
     'text-md',
-    'font-sans',
+    'font-primary',
   ],
 })
 

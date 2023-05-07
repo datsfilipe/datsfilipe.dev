@@ -1,15 +1,22 @@
 import { Providers } from './providers'
 import { appVariants } from '@/styles/appVariants'
-import { Inter, Raleway } from 'next/font/google'
+import { Inter, Lato, Source_Code_Pro } from 'next/font/google'
 import '@/styles/global.css'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 })
-const raleway = Raleway({
+const lato = Lato({
   subsets: ['latin'],
-  variable: '--font-raleway',
+  weight: ['300', '700'],
+  variable: '--font-lato',
+})
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ['latin'],
+  weight: ['300', '700'],
+  variable: '--font-source-code-pro',
 })
 
 export const metadata = {
@@ -20,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={appVariants.app() + ` ${inter.variable} ${raleway.variable}`}>
+      <body className={appVariants.app() + ` ${inter.variable} ${lato.variable} ${sourceCodePro.variable}`}>
         <Providers>
           {children}
         </Providers>

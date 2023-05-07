@@ -12,8 +12,9 @@ module.exports = withTV({
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        serif: ['var(--font-raleway)', 'serif'],
+        primary: ['var(--font-inter)', 'sans-serif'],
+        secondary: ['var(--font-lato)', 'sans-serif'],
+        mono: ['var(--font-source-code-pro)', 'monospace'],
       },
       typography: {
         quoteless: {
