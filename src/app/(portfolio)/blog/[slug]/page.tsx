@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import { Mdx } from '@/components/mdx'
 import { allBlogs } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
-import { ViewCounter } from '../view-counter'
 import { tv } from 'tailwind-variants'
 import { Script } from './script'
 
@@ -83,8 +82,6 @@ export default async function Post({ params }: { params: { slug: string }}) {
         <Balancer>{post.title}</Balancer>
       </h1>
       <div className={blogPostVariants().info()}>
-        <ViewCounter slug={post.slug} trackView />
-        <span className="mx-1">·</span>
         {new Intl.DateTimeFormat('en-US', {
           weekday: 'long',
           year: 'numeric',

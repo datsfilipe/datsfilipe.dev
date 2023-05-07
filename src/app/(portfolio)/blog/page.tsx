@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { allBlogs } from 'contentlayer/generated'
-import { ViewCounter } from './view-counter'
 import { tv } from 'tailwind-variants'
 
 export const metadata: Metadata = {
@@ -39,7 +38,6 @@ export default function Blog() {
             >
               <div className={blogVariants().blog()}>
                 <p>{post.title}</p>
-                <ViewCounter slug={post.slug} trackView={false}/>
               </div>
             </Link>
           )) : <div className='flex flex-col mt-6 text-gray-600 dark:text-gray-400'>
