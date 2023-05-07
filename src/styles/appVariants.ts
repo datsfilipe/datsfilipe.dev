@@ -23,6 +23,7 @@ const page = tv({
     'flex',
     'flex-col',
     'min-h-screen',
+    'p-4',
   ],
 })
 
@@ -53,14 +54,26 @@ const nav = tv({
       column: 'flex-col',
     },
     position: {
-      sticky: 'fixed top-0',
+      absolute: 'absolute',
       static: 'static',
     },
   },
   defaultVariants: {
     direction: 'row',
-    position: 'sticky',
+    position: 'absolute',
   },
+})
+
+const navItem = tv({
+  base: [
+    'text-neutral-900',
+    'dark:text-neutral-50',
+    'dark:hover:text-neutral-300',
+    'hover:text-neutral-500',
+    'duration-200',
+    'ease-in-out',
+    'transition-colors',
+  ],
 })
 
 const field = tv({
@@ -146,4 +159,5 @@ export const appVariants = {
   label,
   app,
   nav,
+  navItem,
 }
