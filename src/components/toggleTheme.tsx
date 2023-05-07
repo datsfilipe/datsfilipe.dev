@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
+import { appVariants } from '@/styles/appVariants'
 
 export const ToggleTheme = () => {
   const [mounted, setMounted] = useState(false)
@@ -17,8 +17,8 @@ export const ToggleTheme = () => {
   }
 
   return (
-    <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {theme === 'dark' ? <Icons.Sun /> : <Icons.Moon />}
-    </Button>
+    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className={appVariants.navItem()}>
+      {theme === 'dark' ? <Icons.Sun size={18} /> : <Icons.Moon size={18} />}
+    </button>
   )
 }
