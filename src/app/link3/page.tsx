@@ -6,11 +6,12 @@ import { Icons } from '@/components/icons'
 import Link from 'next/link'
 import socialLinksData from '@/utils/data/social-links.json'
 import aboutMeData from '@/utils/data/about-me.json'
+import { link } from '@/styles/appVariants'
 
 export const revalidate = 86400 // 24 hours
 
 export const metadata: Metadata = {
-  title: 'datsfilipe | bio',
+  title: 'datsfilipe • links',
   description: 'Social links, contact information and more about Filipe Lima.',
 }
 
@@ -27,20 +28,24 @@ const bioVariants = tv({
 
 const Icon = (name: string) => {
   const Icon = Icons[name]
-  return <Icon />
+  return <Icon className='text-lg' />
 }
 
 export default function Bio() {
   return (
     <main className={bioVariants().main()}>
-      <Link href='/' className={bioVariants().icon()}>
+      <Link href='/' className={link() + ' absolute top-0 left-0 mt-4 ml-4'}>
+        cd ..
+      </Link>
+      <div className={bioVariants().icon()}>
         <Image
           src="https://github.com/datsfilipe.png"
           alt="Filipe's avatar"
           priority
           fill
+          sizes="(max-width: 1200px) 50vw, 33vw"
         />
-      </Link>
+      </div>
       <div className="flex flex-col items-center">
         <h1 className={bioVariants().title()}>{aboutMeData.name}</h1>
         <p className={bioVariants().description()}>{aboutMeData.title}</p>
