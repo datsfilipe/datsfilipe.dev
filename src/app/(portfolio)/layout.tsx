@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         {children}
       </main>
-      <footer className='flex justify-center my-8 items-center'>
+      <footer className='flex justify-center my-8 items-center text-sm sm:text-base'>
         <p className='text-gray-500'>
           <Copyright />
         </p>
