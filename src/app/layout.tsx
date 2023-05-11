@@ -1,5 +1,4 @@
 import { Providers } from './providers'
-import { appVariants } from '@/styles/appVariants'
 import { Inter, Lato, Source_Code_Pro } from 'next/font/google'
 import '@/styles/global.css'
 
@@ -27,7 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={appVariants.app() + ` ${inter.variable} ${lato.variable} ${sourceCodePro.variable}`}>
+      <body className={`${inter.variable} ${lato.variable} ${sourceCodePro.variable}`}>
         <Providers>
           {children}
         </Providers>
