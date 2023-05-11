@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation'
 import { Mdx } from '@/components/mdx'
 import { allBlogs } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
-import { heading, text, container } from '@/styles/appVariants'
+import { heading, text, container, link } from '@/styles/appVariants'
 import { Script } from './script'
+import { Icons } from '@/components/icons'
 
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
@@ -83,6 +84,14 @@ export default async function Post({ params }: { params: { slug: string }}) {
         }).format(new Date(post.publishedAt))}
       </div>
       <Mdx code={post.body.code} tweetIds={tweetIds} />
+      <a
+        className={link({ type: 'secondary' })}
+        href={`https://twitter.com/intent/tweet?text=After%20reading%20&url=https://datsfilipe.dev/blog/${post.slug}%20from%20@datsfilipe1`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icons.Message className="inline-block w-6 h-6 -mt-[2px]" />{' '}Comment on Twitter
+      </a>
     </section>
   )
 }
