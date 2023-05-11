@@ -53,6 +53,11 @@ This is the repository for my personal website, [datsfilipe.dev](https://datsfil
 
 If you find any issues or have suggestions for improvements, feel free to create a pull request or open an issue.
 
+## License
+
+- Code is licensed under <a href='./LICENSE'>MIT</a>.
+- Words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
+
 ## Credits
 
 - [@leerob](https://github.com/leerob) for the blog and og image setup of his [website](https://github.com/leerob/leerob.io), which I used as a template for my own.
@@ -61,8 +66,3 @@ If you find any issues or have suggestions for improvements, feel free to create
 <div align="center">
   <i>Made with ❤️ by <a href="https://datsfilipe.dev/bio">Filipe Lima</a></i>
 </div>
-
-## License
-
-- Code is licensed under <a href='./LICENSE'>MIT</a>.
-- Words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
