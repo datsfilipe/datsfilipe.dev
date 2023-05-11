@@ -89,6 +89,7 @@ export default async function Post({ params }: { params: { slug: string }}) {
         href={`https://twitter.com/intent/tweet?text=After%20reading%20&url=https://datsfilipe.dev/blog/${post.slug}%20from%20@datsfilipe1`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Comment on Twitter"
       >
         <Icons.Message className="inline-block w-6 h-6 -mt-[2px]" />{' '}Comment on Twitter
       </a>

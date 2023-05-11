@@ -24,7 +24,7 @@ export const ToggleTheme = () => {
   }
 
   return (
-    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className={navItem()}>
+    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className={navItem()} aria-label='Toggle Theme'>
       <Icon />
     </button>
   )

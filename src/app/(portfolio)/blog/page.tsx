@@ -20,22 +20,23 @@ export default function Blog() {
           return 1
         })
         .map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-          >
-            <div className='mt-4'>
-              <p className={link()}><b>{post.title}</b></p>
-              <p className={text()}>{
-                new Intl.DateTimeFormat('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                  timeZone: 'UTC'
-                }).format(new Date(post.publishedAt))
-              }</p>
-            </div>
-          </Link>
+          <div className='mt-4' key={post.slug}>
+            <Link
+              href={`/blog/${post.slug}`}
+              aria-label={post.title}
+              className={link()}
+            >
+              <b>{post.title}</b>
+            </Link>
+            <p className={text()}>{
+              new Intl.DateTimeFormat('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timeZone: 'UTC'
+              }).format(new Date(post.publishedAt))
+            }</p>
+          </div>
         )) : <div className={text() + ' mt-4'}>
           <p>There are no posts yet.</p>
           <b className='mt-2'>Check back later! 🫠</b>

@@ -34,7 +34,7 @@ const Icon = (name: string) => {
 export default function Bio() {
   return (
     <main className={bioVariants().main()}>
-      <Link href='/' className={link() + ' absolute top-0 left-0 mt-4 ml-4'}>
+      <Link href='/' className={link() + ' absolute top-0 left-0 mt-4 ml-4'} aria-label='Back to home'>
         cd ..
       </Link>
       <div className={bioVariants().icon()}>
@@ -56,6 +56,7 @@ export default function Bio() {
             use="link"
             href={item.link}
             key={item.icon}
+            aria-label={item.icon}
           >
             {Icon(item.icon)}
           </Button>
@@ -67,6 +68,7 @@ export default function Bio() {
             use="buttonLink"
             href={item.link}
             key={item.icon}
+            aria-label={item.title}
           >
             {Icon(item.icon)}
             &nbsp;{item.title}

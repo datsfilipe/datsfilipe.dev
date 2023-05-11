@@ -35,8 +35,16 @@ const getRepositoryInfo = async (repo: string) => {
 export default async function Home() {
   const repositories = await Promise.all(repos.map(getRepositoryInfo))
 
-  const CustomLink = ({ children, href }: { children: React.ReactNode, href: string }) => (
-    <a className={link()} target="_blank" rel="noopener noreferrer" href={href}>{children}</a>
+  const CustomLink = ({ children, href }: { children: string, href: string }) => (
+    <a
+      className={link()}
+      target="_blank"
+      rel="noopener noreferrer"
+      href={href}
+      aria-label={children}
+    >
+      {children}
+    </a>
   )
 
   return (

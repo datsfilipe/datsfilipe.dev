@@ -20,6 +20,7 @@ export const Card = ({
     target="_blank"
     rel="noopener noreferrer"
     className="flex flex-col p-4 border border-neutral-300 dark:border-neutral-800 rounded-md hover:scale-105 z-10 transition-all duration-200 ease-in-out"
+    aria-label={title}
   >
     <h3 className="text-xl font-bold font-secondary">{title}</h3>
     <p className="mt-2 text-gray-600 dark:text-gray-400">{description}</p>
