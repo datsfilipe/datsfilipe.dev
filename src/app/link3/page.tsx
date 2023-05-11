@@ -43,7 +43,7 @@ export default function Bio() {
           alt="Filipe's avatar"
           priority
           fill
-          sizes="(max-width: 1200px) 50vw, 33vw"
+          className='object-cover'
         />
       </div>
       <div className="flex flex-col items-center">
