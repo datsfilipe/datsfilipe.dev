@@ -1,1 +1,0 @@
-export const COPYRIGHT = '© datsfilipe 2023'
