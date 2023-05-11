@@ -1,6 +1,6 @@
 import aboutMeData from '@/utils/data/about-me.json'
 import { Card } from '@/components/card'
-import { link } from '@/styles/appVariants'
+import { link, text } from '@/styles/appVariants'
 
 export const revalidate = 86400 // 24 hours
 
@@ -51,9 +51,9 @@ export default async function Home() {
     <section className='flex flex-col mx-auto mt-14 max-w-4xl space-y-8'>
       <div className='flex flex-col'>
         <h1 className='text-3xl font-secondary font-bold'>Hi, I&apos;m <span id='about-name'>{aboutMeData.name}</span>,</h1>
-        <p className='text-lg text-neutral-400 font-primary font-bold'>I&apos;m a {aboutMeData.title}.</p>
+        <p className={text() + 'text-lg font-primary font-bold'}>I&apos;m a {aboutMeData.title}.</p>
       </div>
-      <div className='text-md sm:text-lg text-justify text-neutral-400 font-primary space-y-2'>
+      <div className={text() + ' text-md sm:text-lg text-justify font-primary space-y-2'}>
         <p>
           I&apos;m a creative Brazilian, born in 2002, currently studying Computer Science at <CustomLink href='https://www.wyden.com.br'>Wyden</CustomLink> and passionate about learning new things.
         </p>
