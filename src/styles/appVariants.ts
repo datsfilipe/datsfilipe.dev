@@ -5,6 +5,8 @@ const app = tv({
     'font-primary',
     'selection:bg-zinc-400',
     'selection:bg-opacity-30',
+    'bg-neutral-50',
+    'dark:bg-neutral-900',
   ],
 })
 
@@ -24,6 +26,8 @@ const page = tv({
     'flex-col',
     'min-h-screen',
     'p-4',
+    'mx-auto',
+    'max-w-4xl',
   ],
 })
 
@@ -47,29 +51,14 @@ const nav = tv({
     'space-x-4',
     'items-center',
     'justify-center',
-  ],
-  variants: {
-    direction: {
-      row: 'flex-row',
-      column: 'flex-col',
-    },
-    position: {
-      absolute: 'absolute',
-      static: 'static',
-    },
-  },
-  defaultVariants: {
-    direction: 'row',
-    position: 'absolute',
-  },
+  ]
 })
 
 const navItem = tv({
   base: [
     'text-neutral-900',
     'dark:text-neutral-50',
-    'dark:hover:text-neutral-300',
-    'hover:text-neutral-500',
+    'hover:underline',
     'duration-200',
     'ease-in-out',
     'transition-colors',
@@ -96,26 +85,45 @@ const field = tv({
 
 const text = tv({
   base: [
+    'dark:text-neutral-400',
+    'text-neutral-600',
+    'font-primary',
+  ],
+})
+
+const heading = tv({
+  base: [
+    'text-2xl',
+    'font-bold',
+    'font-secondary',
     'text-neutral-900',
     'dark:text-neutral-50',
   ],
 })
 
-const heading = tv({
-  extend: text,
+const link = tv({
   base: [
-    'text-xl',
-    'font-bold',
-    'font-serif',
-  ],
-})
-
-const paragraph = tv({
-  extend: text,
-  base: [
-    'text-md',
     'font-primary',
+    'hover:underline',
+    'duration-200',
+    'ease-in-out',
+    'transition-colors',
   ],
+  variants: {
+    type: {
+      primary: [
+        'text-neutral-900',
+        'dark:text-neutral-50',
+      ],
+      secondary: [
+        'dark:text-gray-500',
+        'text-gray-500',
+      ],
+    }
+  },
+  defaultVariants: {
+    type: 'primary',
+  },
 })
 
 const button = tv({
@@ -141,23 +149,35 @@ const input = tv({
 const label = tv({
   extend: text,
   base: [
-    'text-md',
-    'font-primary',
+    'font-bold',
   ],
 })
 
-export const appVariants = {
+const post = tv({
+  base: [
+    'prose',
+    'prose-quoteless',
+    'prose-neutral',
+    'dark:prose-invert',
+    'font-primary',
+    'text-base',
+    'text-justify',
+  ],
+})
+
+export {
   container,
   page,
   card,
   field,
   text,
   heading,
-  paragraph,
   button,
   input,
   label,
   app,
   nav,
   navItem,
+  link,
+  post,
 }

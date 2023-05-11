@@ -4,10 +4,11 @@
 
 @layer base{
   body {
-    @apply dark:bg-zinc-950 bg-zinc-50 font-primary
+    @apply font-primary selection:bg-zinc-400 selection:bg-opacity-30 bg-neutral-50 dark:bg-neutral-900
   }
 }
 
+/* blog styles by @leerob mostly */
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -35,19 +36,6 @@
   @apply transition-all decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 underline-offset-2 hover:dark:decoration-neutral-500 decoration-[0.1em];
 }
 
-.prose pre {
-  @apply border border-neutral-800 bg-neutral-900;
-}
-
-.prose code {
-  @apply text-neutral-800 dark:text-neutral-200 px-1 py-0.5 border border-neutral-100 dark:border-neutral-800 rounded-md bg-neutral-100 dark:bg-neutral-900;
-}
-
-.prose pre code {
-  @apply text-neutral-800 dark:text-neutral-200 p-0;
-  border: initial;
-}
-
 .prose img {
   /* Don't apply styles to next/image */
   @apply m-0;
@@ -57,6 +45,19 @@
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
+}
+
+.prose pre {
+  @apply border border-neutral-800 bg-neutral-900;
+}
+
+.prose code {
+  @apply text-neutral-800 dark:text-neutral-200 px-1 py-0.5 border border-neutral-100 dark:border-neutral-800 rounded-md bg-neutral-100 dark:bg-neutral-900 font-mono;
+}
+
+.prose pre code {
+  @apply text-neutral-800 dark:text-neutral-200 p-0 font-mono;
+  border: initial;
 }
 
 code[class*='language-'],
@@ -73,20 +74,9 @@ pre {
   scrollbar-width: none; /* Firefox */
 }
 
-table {
-  display: block;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.prose .callout > p {
-  margin: 0 !important;
-}
-
-/* For rehype-pretty code */
+/* For rehype-pretty code by @leerob mostly */
 [data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
+  @apply min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
   counter-reset: line;
   box-decoration-break: clone;
 }
@@ -102,21 +92,27 @@ table {
   text-align: right;
   color: gray;
 }
-
 [data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply bg-slate-500 bg-opacity-10;
+  @apply bg-neutral-500 bg-opacity-10;
 }
 [data-rehype-pretty-code-fragment] .line-highlighted span {
   @apply relative;
 }
 [data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply rounded-md bg-slate-500 bg-opacity-10 p-1;
+  @apply rounded-md bg-neutral-500 bg-opacity-10 p-1;
 }
 [data-rehype-pretty-code-title] {
   @apply px-4 py-3 font-mono text-xs font-medium border rounded-t-md text-neutral-200 border-[#333333] bg-[#1c1c1c];
 }
 [data-rehype-pretty-code-title] + pre {
-  @apply mt-0 rounded-t-none border-t-0;
+  @apply mt-0 rounded-t-none border-t-0 text-lg;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 /* hide scrollbar class */
@@ -137,35 +133,36 @@ table {
   --tweet-bg-color: #111 !important;
   --tweet-skeleton-gradient: linear-gradient(90deg, #111 0%, #222 50%, #111 100%) !important;
   --tweet-border: 1px solid #252525 !important;
-  --tweet-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  --tweet-font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
   --tweet-font-color: #fff !important;
   --tweet-font-color-secondary: rgb(110, 118, 125) !important;
   --tweet-bg-color-hover: #222 !important;
   --tweet-twitter-icon-color: rgb(29, 161, 242) !important;
   --tweet-verified-old-color: rgb(29, 161, 242) !important;
   --tweet-verified-blue-color: rgb(29, 161, 242) !important;
+  --tweet-container-margin: 1.5rem auto 0 auto !important;
 }
 
 /* tweak some styles */
-.tweet-container_root__C1PXz {
+[class*='tweet-container_root'] {
   border-radius: 0.375rem !important;
 }
 
-.tweet-actions_actions__KJu0T {
+[class*='tweet-actions_actions'] {
   border: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.tweet-replies_replies__zt0nE {
+[class*='tweet-replies_replies'] {
   display: none !important;
 }
 
-.tweet-info_info__Exbpb {
+[class*='tweet-info_info'] {
   margin-top: 10px;
   margin-bottom: 10px;
 
-  .tweet-info_infoLink__rSo0E {
+  [class*='tweet-info_infoLink'] {
     display: none !important;
   }
 }
