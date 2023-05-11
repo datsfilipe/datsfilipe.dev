@@ -55,10 +55,10 @@ export default async function Home() {
       </div>
       <div className={text() + ' text-md sm:text-lg text-justify font-primary space-y-2'}>
         <p>
-          I&apos;m a creative Brazilian, born in 2002, currently studying Computer Science at <CustomLink href='https://www.wyden.com.br'>Wyden</CustomLink> and passionate about learning new things.
+          I&apos;m a creative Brazilian developer, born in 2002, currently studying Computer Science at <CustomLink href='https://www.wyden.com.br'>Wyden</CustomLink> and passionate about learning new things.
         </p>
         <p>
-          My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <CustomLink href='https://betterdiscord.com'>BetterDiscord</CustomLink> and other minor projects on <CustomLink href='https://gtihub.com/datsfilipe'>Github</CustomLink>.
+          My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <CustomLink href='https://betterdiscord.app/developers'>BetterDiscord</CustomLink> and other minor projects on <CustomLink href='https://github.com/datsfilipe'>Github</CustomLink>.
         </p>
         <p>
           When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call <CustomLink href='https://jie-fang.github.io/blog/basics-of-ricing'>&ldquo;ricing&rdquo;</CustomLink>, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares.
