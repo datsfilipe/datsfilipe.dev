@@ -4,7 +4,7 @@ import { allBlogs } from 'contentlayer/generated'
 import { text, link, container, heading } from '@/styles/appVariants'
 
 export const metadata: Metadata = {
-  title: 'datsfilipe | blog',
+  title: 'blog',
   description: 'My collection of posts about software development (mostly) and other things.',
 }
 

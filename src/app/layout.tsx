@@ -19,8 +19,11 @@ const sourceCodePro = Source_Code_Pro({
 })
 
 export const metadata = {
-  title: 'datsfilipe',
-  description: 'Filipe Lima social links.',
+  title: {
+    template: 'datsfilipe • %s',
+    default: 'datsfilipe',
+  },
+  description: 'Filipe Lima social links.'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

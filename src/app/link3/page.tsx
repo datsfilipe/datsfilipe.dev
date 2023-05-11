@@ -11,7 +11,7 @@ import { link } from '@/styles/appVariants'
 export const revalidate = 86400 // 24 hours
 
 export const metadata: Metadata = {
-  title: 'datsfilipe • links',
+  title: 'links',
   description: 'Social links, contact information and more about Filipe Lima.',
 }
 
