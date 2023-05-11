@@ -61,3 +61,8 @@ If you find any issues or have suggestions for improvements, feel free to create
 <div align="center">
   <i>Made with ❤️ by <a href="https://datsfilipe.dev/bio">Filipe Lima</a></i>
 </div>
+
+## License
+
+- Code is licensed under <a href='./LICENSE'>MIT</a>.
+- Words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
