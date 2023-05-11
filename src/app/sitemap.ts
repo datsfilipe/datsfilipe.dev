@@ -3,7 +3,7 @@ import { allBlogs } from 'contentlayer/generated'
 
 export default async function sitemap() {
   const blogs = allBlogs.map((post) => ({
-    url: `https://leerob.io/blog/${post.slug}`,
+    url: `https://datsfilipe.dev/blog/${post.slug}`,
     lastModified: post.publishedAt,
   }))
 
