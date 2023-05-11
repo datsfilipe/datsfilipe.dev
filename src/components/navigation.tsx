@@ -9,11 +9,11 @@ export const Navigation = () => {
       <Link href='/' className={navItem()}>
         Home
       </Link>
-      <Link href='/bio' className={navItem()}>
-        Bio
-      </Link>
       <Link href='/blog' className={navItem()}>
         Blog
+      </Link>
+      <Link href='/link3' className={navItem()}>
+        Links
       </Link>
       <Link href='/rss.xml' target='_blank' rel='noopener noreferrer'>
         <Icons.Rss size={18} />
