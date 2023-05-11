@@ -1,6 +1,5 @@
 import { tv } from 'tailwind-variants'
 import Image from 'next/image'
-import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
 import Link from 'next/link'
@@ -9,11 +8,6 @@ import aboutMeData from '@/utils/data/about-me.json'
 import { link } from '@/styles/appVariants'
 
 export const revalidate = 86400 // 24 hours
-
-export const metadata: Metadata = {
-  title: 'links',
-  description: 'Social links, contact information and more about Filipe Lima.',
-}
 
 const bioVariants = tv({
   slots: {
