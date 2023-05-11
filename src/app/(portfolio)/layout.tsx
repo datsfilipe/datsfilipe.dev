@@ -6,12 +6,6 @@ import { generateRssFeed } from '@/utils/rss'
 generateRssFeed()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  if (process.env.NODE_ENV !== 'development') return (
-    <main className="flex justify-center items-center mx-auto max-w-4xl min-h-screen">
-      ⚠️ This website is under construction. Please, come back later.
-    </main>
-  )
-
   return (
     <>
       <main className={page()}>
