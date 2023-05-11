@@ -1,14 +1,76 @@
+import aboutMeData from '@/utils/data/about-me.json'
+import { Card } from '@/components/card'
+
 export const revalidate = 86400 // 24 hours
 
 export const metadata = {
-  title: 'datsfilipe',
+  title: 'datsfilipe • home',
   description: 'Filipe Lima website.',
 }
 
-export default function Home() {
+type Repository = {
+  name: string
+  description: string
+  html_url: string
+  stargazers_count: number
+  language: string
+}
+
+const repos = [
+  'datsfilipe/web-ascii-theater',
+  'datsfilipe/datsfilipe.dev',
+  'datsfilipe/vercel-ui-clone',
+  'datsfilipe/react-jokenpo',
+  'datsfilipe/dotfiles',
+  'datsfilipe/ignews',
+]
+
+const getRepositoryInfo = async (repo: string) => {
+  const response = await fetch(`https://api.github.com/repos/${repo}`)
+  const data = await response.json() as Repository
+  return data
+}
+
+export default async function Home() {
+  const repositories = await Promise.all(repos.map(getRepositoryInfo))
+
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <section className='flex flex-col mx-auto mt-14 max-w-4xl space-y-8'>
+      <div className='flex flex-col'>
+        <h1 className='text-3xl font-secondary font-bold'>Hi, I&apos;m <span id='about-name'>{aboutMeData.name}</span>,</h1>
+        <p className='text-lg text-neutral-400 font-primary font-bold'>I&apos;m a {aboutMeData.title}.</p>
+      </div>
+      <div className='text-lg text-justify text-neutral-400 font-primary space-y-2'>
+        <p>
+          I&apos;m a creative Brazilian, born in 2002, currently studying Computer Science at <a href='https://www.wyden.com.br'>Wyden</a> and passionate about learning new things.
+        </p>
+        <p>
+          My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <a href='https://betterdiscord.com'>BetterDiscord</a> and other minor projects on <a href='https://gtihub.com/datsfilipe'>Github</a>.
+        </p>
+        <p>
+          When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call &ldquo;ricing&rdquo;, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares.
+        </p>
+      </div>
+      <div className='flex flex-col space-y-4'>
+        <h2 className='text-2xl font-secondary font-bold'>
+          {'<Projects>'}
+        </h2>
+        <div className='ml-4 grid grid-cols-2 gap-4'>
+          {repositories.map((repo) => (
+            <Card
+              key={repo.name}
+              title={repo.name}
+              description={repo.description}
+              url={repo.html_url}
+              stars={repo.stargazers_count}
+              language={repo.language}
+            />
+          ))}
+        </div>
+        <strong className='text-2xl font-secondary'>
+          {'</Projects>'}
+        </strong>
+      </div>
+    </section>
   )
 }
