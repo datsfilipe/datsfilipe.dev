@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { Mdx } from '@/components/mdx'
 import { allBlogs } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
-import { tv } from 'tailwind-variants'
+import { heading, text, container } from '@/styles/appVariants'
 import { Script } from './script'
 
 export async function generateStaticParams() {
@@ -56,14 +56,6 @@ export async function generateMetadata({
   }
 }
 
-const blogPostVariants = tv({
-  slots: {
-    section: 'flex flex-col my-6 mr-4 ml-8 w-full h-full',
-    title: 'font-serif text-3xl font-bold max-w-[650px]',
-    info: 'flex items-center mt-2 mb-8 text-sm',
-  },
-})
-
 export const revalidate = 1800
 
 export default async function Post({ params }: { params: { slug: string }}) {
@@ -76,12 +68,12 @@ export default async function Post({ params }: { params: { slug: string }}) {
   const tweetIds = post.tweetIds as string[]
 
   return (
-    <section className={blogPostVariants().section()}>
+    <section className={container() + ' mt-14 mb-14'}>
       <Script data={post.structuredData} />
-      <h1 className={blogPostVariants().title()}>
+      <h1 className={heading()}>
         <Balancer>{post.title}</Balancer>
       </h1>
-      <div className={blogPostVariants().info()}>
+      <div className={text() + ' mb-8'}>
         {new Intl.DateTimeFormat('en-US', {
           weekday: 'long',
           year: 'numeric',
