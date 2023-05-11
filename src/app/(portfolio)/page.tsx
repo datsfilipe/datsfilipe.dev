@@ -1,5 +1,6 @@
 import aboutMeData from '@/utils/data/about-me.json'
 import { Card } from '@/components/card'
+import { link } from '@/styles/appVariants'
 
 export const revalidate = 86400 // 24 hours
 
@@ -34,28 +35,32 @@ const getRepositoryInfo = async (repo: string) => {
 export default async function Home() {
   const repositories = await Promise.all(repos.map(getRepositoryInfo))
 
+  const CustomLink = ({ children, href }: { children: React.ReactNode, href: string }) => (
+    <a className={link()} target="_blank" rel="noopener noreferrer" href={href}>{children}</a>
+  )
+
   return (
     <section className='flex flex-col mx-auto mt-14 max-w-4xl space-y-8'>
       <div className='flex flex-col'>
         <h1 className='text-3xl font-secondary font-bold'>Hi, I&apos;m <span id='about-name'>{aboutMeData.name}</span>,</h1>
         <p className='text-lg text-neutral-400 font-primary font-bold'>I&apos;m a {aboutMeData.title}.</p>
       </div>
-      <div className='text-lg text-justify text-neutral-400 font-primary space-y-2'>
+      <div className='text-md sm:text-lg text-justify text-neutral-400 font-primary space-y-2'>
         <p>
-          I&apos;m a creative Brazilian, born in 2002, currently studying Computer Science at <a href='https://www.wyden.com.br'>Wyden</a> and passionate about learning new things.
+          I&apos;m a creative Brazilian, born in 2002, currently studying Computer Science at <CustomLink href='https://www.wyden.com.br'>Wyden</CustomLink> and passionate about learning new things.
         </p>
         <p>
-          My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <a href='https://betterdiscord.com'>BetterDiscord</a> and other minor projects on <a href='https://gtihub.com/datsfilipe'>Github</a>.
+          My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <CustomLink href='https://betterdiscord.com'>BetterDiscord</CustomLink> and other minor projects on <CustomLink href='https://gtihub.com/datsfilipe'>Github</CustomLink>.
         </p>
         <p>
-          When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call &ldquo;ricing&rdquo;, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares.
+          When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call <CustomLink href='https://jie-fang.github.io/blog/basics-of-ricing'>&ldquo;ricing&rdquo;</CustomLink>, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares.
         </p>
       </div>
       <div className='flex flex-col space-y-4'>
         <h2 className='text-2xl font-secondary font-bold'>
           {'<Projects>'}
         </h2>
-        <div className='ml-4 grid grid-cols-2 gap-4'>
+        <div className='ml-4 grid grid-cols-1 gap-4 sm:grid-cols-2'>
           {repositories.map((repo) => (
             <Card
               key={repo.name}
