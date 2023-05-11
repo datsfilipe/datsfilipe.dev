@@ -1,22 +1,23 @@
 import Link from 'next/link'
 import { ToggleTheme } from '@/components/toggleTheme'
-import { appVariants } from '@/styles/appVariants'
+import { navItem, nav } from '@/styles/appVariants'
+import { Icons } from './icons'
 
 export const Navigation = () => {
   return (
-    <nav className={appVariants.nav() + ' space-x-4'}>
-      <Link href='/bio' className={appVariants.navItem()}>
+    <nav className={nav() + ' space-x-4 my-4 font-secondary'}>
+      <Link href='/' className={navItem()}>
+        Home
+      </Link>
+      <Link href='/bio' className={navItem()}>
         Bio
       </Link>
-      <Link href='/blog' className={appVariants.navItem()}>
+      <Link href='/blog' className={navItem()}>
         Blog
       </Link>
-      <Link href='/projects' className={appVariants.navItem()}>
-        Projects
-      </Link>
-      {/*<Link href='' target='_blank' rel='noopener noreferrer'>
+      <Link href='/rss.xml' target='_blank' rel='noopener noreferrer'>
         <Icons.Rss size={18} />
-      </Link>*/}
+      </Link>
       <ToggleTheme />
     </nav>
   )
