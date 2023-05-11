@@ -3,6 +3,9 @@ import { appVariants } from '@/styles/appVariants'
 import { COPYRIGHT } from '@/components/copyright'
 import Image from 'next/image'
 import icon from '@/app/icon.svg'
+import { generateRssFeed } from '@/utils/rss'
+
+generateRssFeed()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   if (process.env.NODE_ENV !== 'development') return (
