@@ -51,7 +51,7 @@ export default async function Home() {
     <section className='flex flex-col mx-auto mt-14 max-w-4xl space-y-8'>
       <div className='flex flex-col'>
         <h1 className='text-3xl font-secondary font-bold'>Hi, I&apos;m <span id='about-name'>{aboutMeData.name}</span>,</h1>
-        <p className={text() + 'text-lg font-primary font-bold'}>I&apos;m a {aboutMeData.title}.</p>
+        <p className={text() + 'text-lg font-primary font-bold'}>{aboutMeData.title}.</p>
       </div>
       <div className={text() + ' text-md sm:text-lg text-justify font-primary space-y-2'}>
         <p>
