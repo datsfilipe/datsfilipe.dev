@@ -57,6 +57,7 @@ const nav = tv({
 const navItem = tv({
   base: [
     'text-neutral-900',
+    'font-bold',
     'dark:text-neutral-50',
     'hover:underline',
     'duration-200',
