@@ -20,28 +20,33 @@ const sourceCodePro = Source_Code_Pro({
 })
 
 const ogImage = 'https://datsfilipe.dev/api/og?title=datsfilipe%20personal%20website'
+const url = 'https://datsfilipe.dev'
+const description = 'Filipe Lima personal website.'
+const title = 'datsfilipe'
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: url,
+  },
   title: {
     template: 'datsfilipe • %s',
     default: 'datsfilipe',
   },
+  description,
+  metadataBase: new URL(url),
   openGraph: {
-    title: 'datsfilipe',
-    description: 'Filipe Lima personal website.',
+    url,
+    title,
+    description,
     type: 'website',
-    url: 'https://datsfilipe.dev',
-    images: [
-      {
-        url: ogImage,
-      },
-    ],
+    siteName: 'datsfilipe',
+    images: [ogImage],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'datsfilipe',
-    description: 'Filipe Lima personal website.',
+    title,
+    description,
     images: [ogImage],
+    creator: '@datsfilipe1',
   },
 }
 
