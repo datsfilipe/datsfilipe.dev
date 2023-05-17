@@ -23,7 +23,7 @@ const repos = [
   'datsfilipe/vercel-ui-clone',
   'datsfilipe/react-jokenpo',
   'datsfilipe/dotfiles',
-  'datsfilipe/ignews',
+  'datsfilipe/github-search',
 ]
 
 const getRepositoryInfo = async (repo: string) => {
