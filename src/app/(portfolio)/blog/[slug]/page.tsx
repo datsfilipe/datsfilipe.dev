@@ -71,7 +71,7 @@ export default async function Post({ params }: { params: { slug: string }}) {
   return (
     <section className={container() + ' mt-14 mb-14'}>
       <Script data={post.structuredData} />
-      <h1 className={heading() + ' text-4xl'}>
+      <h1 className={heading() + ' text-5xl'}>
         <Balancer>{post.title}</Balancer>
       </h1>
       <div className={text() + ' mb-8'}>
