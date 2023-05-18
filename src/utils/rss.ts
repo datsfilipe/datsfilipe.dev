@@ -3,7 +3,7 @@ import { Feed } from 'feed'
 import { allBlogs } from 'contentlayer/generated'
 
 export const generateRssFeed = () => {
-  if (!allBlogs) return
+  if (!allBlogs || process.env.NODE_ENV === 'production') return
 
   const DOMAIN = 'https://datsfilipe.dev'
   const AUTHOR = {
