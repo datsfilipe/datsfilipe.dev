@@ -42,17 +42,14 @@ export async function generateMetadata({
       type: 'article',
       publishedTime,
       url: `https://datsfilipe.dev/blog/${slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       images: [ogImage],
+      creator: '@datsfilipe1',
     },
   }
 }
