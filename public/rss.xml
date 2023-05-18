@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Filipe Lima</title>
+        <link>https://datsfilipe.dev</link>
+        <description>Filipe Lima Blog</description>
+        <lastBuildDate>Thu, 18 May 2023 13:06:03 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>CC BY-NC-SA 4.0 @ Filipe Lima</copyright>
+        <item>
+            <title><![CDATA[Me, animes and this blog]]></title>
+            <link>https://datsfilipe.dev/blog/me-animes-and-this-blog</link>
+            <guid>https://datsfilipe.dev/blog/me-animes-and-this-blog</guid>
+            <pubDate>Thu, 18 May 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Consider this an introductory post rather than a regular one.]]></description>
+            <author>datsfilipe@skiff.com (Filipe Lima)</author>
+            <enclosure url="https://datsfilipe.dev/api/og?title=Me, animes and this blog" length="0" type="image//api/og"/>
+        </item>
+    </channel>
+</rss>
