@@ -37,7 +37,7 @@ export default function Bio() {
           alt="Filipe's avatar"
           priority
           fill
-          sizes='32px'
+          sizes="128px"
         />
       </div>
       <div className="flex flex-col items-center">
