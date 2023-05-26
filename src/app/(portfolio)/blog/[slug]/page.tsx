@@ -8,6 +8,8 @@ import { heading, text, container, link } from '@/styles/appVariants'
 import { Script } from './script'
 import { Icons } from '@/components/icons'
 
+const url = 'https://datsfilipe.dev'
+
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
     slug: post.slug,
@@ -26,22 +28,20 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
     slug,
   } = post
-  const ogImage = image
-    ? `https://datsfilipe.dev${image}`
-    : `https://datsfilipe.dev/api/og?title=${title}`
+  const ogImage = `${url}/api/og?title=${title}`
 
   return {
     title,
     description,
+    metadataBase: new URL(url),
     openGraph: {
       title,
       description,
       type: 'article',
       publishedTime,
-      url: `https://datsfilipe.dev/blog/${slug}`,
+      url: `${url}/blog/${slug}`,
       images: [ogImage],
     },
     twitter: {
