@@ -25,28 +25,27 @@ const description = 'Filipe Lima personal website.'
 const title = 'datsfilipe'
 
 export const metadata: Metadata = {
-  alternates: {
-    canonical: url,
-  },
   title: {
     template: 'datsfilipe • %s',
     default: 'datsfilipe',
   },
   description,
-  metadataBase: new URL(url),
   openGraph: {
     url,
     title,
     description,
     type: 'website',
+    locale: 'en_US',
     siteName: 'datsfilipe',
-    images: [ogImage],
+    images: [
+      {
+        url: ogImage,
+      }
+    ],
   },
   twitter: {
     title,
     description,
-    images: [ogImage],
-    creator: '@datsfilipe1',
   },
 }
 

@@ -28,30 +28,39 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
+    image,
     slug,
   } = post
-  const ogImage = `${url}/api/og?title=${title}`
+  const ogImage = image ?
+    `${url}${image}` :
+    `${url}/api/og?title=${title}`
 
   return {
     title,
     description,
-    metadataBase: new URL(url),
     openGraph: {
       title,
       description,
       type: 'article',
       publishedTime,
       url: `${url}/blog/${slug}`,
-      images: [ogImage],
+      siteName: 'datsfilipe',
+      images: [
+        {
+          url: ogImage,
+        }
+      ],
     },
     twitter: {
+      card: 'summary_large_image',
       title,
       description,
-      images: {
-        url: ogImage,
-        alt: title,
-      },
-      card: 'summary_large_image',
+      images: [
+        {
+          url: ogImage,
+          alt: title,
+        }
+      ],
     },
   }
 }
