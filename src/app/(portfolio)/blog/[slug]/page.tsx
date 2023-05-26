@@ -45,11 +45,13 @@ export async function generateMetadata({
       images: [ogImage],
     },
     twitter: {
-      card: 'summary_large_image',
       title,
       description,
-      images: [ogImage],
-      creator: '@datsfilipe1',
+      images: {
+        url: ogImage,
+        alt: title,
+      },
+      card: 'summary_large_image',
     },
   }
 }
