@@ -61,7 +61,7 @@ export default async function Home() {
           My expertise lies in front-end web development using technologies such as React.js, Next.js, and TypeScript. I have contributed to open-source projects like <CustomLink href='https://betterdiscord.app/developers'>BetterDiscord</CustomLink> and other minor projects on <CustomLink href='https://github.com/datsfilipe'>Github</CustomLink>.
         </p>
         <p>
-          When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call <CustomLink href='https://jie-fang.github.io/blog/basics-of-ricing'>&ldquo;ricing&rdquo;</CustomLink>, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares.
+          When I&apos;m not programming, I enjoy listening to music (rock, pop, and indie mostly) and watching sports/e-sports matches, such as Basketball, Soccer, League of Legends, and Counter-Strike. I also enjoy customizing my operating system, which we call <CustomLink href='https://jie-fang.github.io/blog/basics-of-ricing'>&ldquo;ricing&rdquo;</CustomLink>, and it has given me basic to intermediate knowledge in shell scripting, Lua, Linux, window managers, and other softwares. You can see some of my rices in <CustomLink href='https://myrices.datsfilipe.dev'>myrices.datsfilipe.dev</CustomLink>.
         </p>
       </div>
       <div className='flex flex-col space-y-4'>
