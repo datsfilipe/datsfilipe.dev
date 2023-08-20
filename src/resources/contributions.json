@@ -1,0 +1,32 @@
+{
+  "contributions": [
+    "NayamAmarshe",
+    "Nick-Gabe/central-nickgabe",
+    "hashrock/kv-sketchbook",
+    "eduardconstantin/storybook-genie",
+    "LukeberryPi/phived"
+  ],
+  "repositories": [
+    "datsfilipe/dotfiles",
+    "datsfilipe/datsfilipe.dev",
+    "datsfilipe/datsnvim",
+    "datsfilipe/qhub",
+    "datsfilipe/gen-readme",
+    "datsfilipe/ignews",
+    "datsfilipe/react-jokenpo",
+    "datsfilipe/dashgo",
+    "datsfilipe/dtmoney",
+    "datsfilipe/Proffys",
+    "datsfilipe/tabnews-clone",
+    "datsfilipe/safe-cats",
+    "datsfilipe/my-rices",
+    "datsfilipe/sudoku",
+    "datsfilipe/sort-tube",
+    "datsfilipe/min-theme.nvim",
+    "datsfilipe/github-search",
+    "datsfilipe/vercel-ui-clone",
+    "datsfilipe/wiserick-next-app",
+    "datsfilipe/hyper-smooth-theme",
+    "datsfilipe/web-ascii-theater"
+  ]
+}
