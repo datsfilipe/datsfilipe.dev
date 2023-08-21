@@ -3,6 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const response = await fetch(Astro.url.origin + '/api/contributions.json');
+const { contributions } = await response.json();
 ---
 
 <!DOCTYPE html>
@@ -12,8 +15,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
-		</main>
-		<Footer />
-	</body>
+  </body>
+  <Footer/>
 </html>
