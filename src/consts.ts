@@ -1,5 +1,47 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
 export const SITE_TITLE = 'Filipe Lima'
 export const SITE_DESCRIPTION = 'Welcome to my personal website!'
+
+export const NAME = 'Filipe Lima'
+export const ROLE = 'Frontend Software Engineer'
+export const BOOKS = ['Clean Code - Robert C. Martin', 'Metamorphosis - Franz Kafka', 'Fahrenheit 451 - Ray Bradbury', 'The Crow and Other Stories - Edgar Allan Poe']
+export const HOBBIES = ['Linux customization', 'gaming', 'reading', 'coding']
+export const SOCIAL = [
+  {
+    link: 'https://github.com/datsfilipe',
+    name: 'Github'
+  },
+  {
+    link: 'https://twitter.com/datsfilipe',
+    name: 'Twitter'
+  },
+  {
+    link: 'https://www.linkedin.com/in/datsfilipe/',
+    name: 'Linkedin'
+  },
+  {
+    link: 'https://www.reddit.com/user/datsfilipe',
+    name: 'Reddit'
+  },
+  {
+    link: 'mailto:contato@datsfilipe.dev',
+    name: 'Mail'
+  },
+  {
+    link: 'https://www.youtube.com/@datsfilipe',
+    name: 'Youtube'
+  }
+]
+export const OTHER_LINKS = [
+  {
+    name: 'Curriculum Vitae',
+    link: '/FILIPE_LIMA-EN.pdf'
+  },
+  {
+    link: 'https://github.com/sponsors/datsfilipe',
+    name: 'Sponsor me on GitHub'
+  },
+  {
+    link: 'https://ko-fi.com/datsfilipe',
+    name: 'Buy me a coffee'
+  }
+]
