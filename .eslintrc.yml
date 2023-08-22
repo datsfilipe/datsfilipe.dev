@@ -12,5 +12,7 @@ plugins:
   - react
 rules: {
   eol-last: off,
-  '@typescript-eslint/triple-slash-reference': off
+  '@typescript-eslint/triple-slash-reference': off,
+  no-constant-condition: off,
+  'react/react-in-jsx-scope': off
 }
