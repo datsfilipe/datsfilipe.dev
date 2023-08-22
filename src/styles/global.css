@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-stone-950 text-white;
+  }
+
+  a {
+    @apply hover:underline underline-offset-4 hover:brightness-90 transition-all duration-200 hover:cursor-pointer;
+  }
+
+  ul {
+    @apply list-none flex;
+  }
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
