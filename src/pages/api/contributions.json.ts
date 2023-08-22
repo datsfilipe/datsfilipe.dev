@@ -4,11 +4,17 @@ import fs from 'node:fs/promises'
 import contributionsLinks from '../../resources/contributions.json'
 const ghToken = import.meta.env.GITHUB_TOKEN as string
 
-interface RepositoryInformation {
+export interface RepositoryInformation {
   name: string
   html_url: string
   description: string
   homepage?: string
+  owner: {
+    login: string
+    avatar_url: string
+  }
+  stargazers_count: number
+  language: string
 }
 
 const cachePath = './public/.cache/contributions.json'
