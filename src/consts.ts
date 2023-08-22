@@ -24,11 +24,15 @@ export const SOCIAL = [
   },
   {
     link: 'mailto:contato@datsfilipe.dev',
-    name: 'Mail'
+    name: 'Email'
   },
   {
     link: 'https://www.youtube.com/@datsfilipe',
     name: 'Youtube'
+  },
+  {
+    link: 'https://www.tiktok.com/@datsfilipe1',
+    name: 'TikTok'
   }
 ]
 export const OTHER_LINKS = [
