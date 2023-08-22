@@ -4,17 +4,17 @@ const { contribution } = Astro.props;
 ---
 <div class="flex flex-col p-4 h-full bg-stone-600">
   <div class="flex items-center justify-between">
-    <h2 class="text-xl font-bold">
-      <a
-        href={contribution.html_url}
-        class="flex items-center space-x-2"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+    <a
+      href={contribution.html_url}
+      class="px-4 py-2 bg-stone-800 hover:no-underline"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <h2 class="flex items-center space-x-2 text-xl font-bold">
         <FaGithub size={18} />
         <span>{contribution.name}</span>
-      </a>
-    </h2>
+      </h2>
+    </a>
     <span class="flex items-center space-x-1">
       <FaStar size={18} />
       <span class="font-mono mt-[5px]">{contribution.stargazers_count}</span>
