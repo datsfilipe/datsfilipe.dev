@@ -1,0 +1,36 @@
+---
+import SocialLinks from './SocialLinks.astro';
+import OtherLinks from './OtherLinks.astro';
+
+import {
+  NAME,
+  ROLE,
+} from '../consts';
+---
+<section class="flex justify-between space-x-8 mt-4">
+  <div class="flex-shrink-0">
+    <img
+      src="https://github.com/datsfilipe.png"
+      alt="Filipe's GitHub avatar"
+      class="rounded-lg w-64 h-64 mx-auto mt-4 mb-2"
+      loading="lazy"
+    />
+    <h3 class="text-lg font-semibold mt-6 mb-2">Social Links!</h3>
+    <SocialLinks/>
+    </div>
+    <div>
+    <h1 class="text-2xl font-bold my-4 p-2 bg-blue-600 w-fit">
+      Hi, I'm {NAME}!
+    </h1>
+    <p class="my-4 text-justify">
+      I'm a 21-year-old {ROLE} based in Brazil with a strong focus on crafting user interfaces using JavaScript, TypeScript, and React. I've gained remote development experience and contributed to open source projects.
+    </p>
+    <p class="my-4 text-justify">
+      In my free time, I indulge in <a href="https://jie-fang.github.io/blog/basics-of-ricing" class="text-blue-500" target="_blank" rel="noopener noreferrer">ricing</a>, gaming, movie watching, and coding personal projects. I'm dedicated to becoming a Fullstack developer and currently exploring Node.js, databases, GraphQL and Rust in pursuit of this goal.
+    </p>
+    <h1 class="text-2xl font-bold my-6">
+      Others!
+    </h1>
+    <OtherLinks/>
+  </div>
+</section>
