@@ -21,3 +21,69 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+html pre, html code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* blog post styles */
+.prose p + p {
+  @apply mt-6;
+}
+
+.prose .anchor {
+  @apply no-underline text-2xl font-bold relative;
+
+  max-width: 80%;
+  line-height: 6rem;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose .anchor:before {
+  @apply text-neutral-300 dark:text-neutral-700 invisible hover:visible;
+  content: '#';
+  margin-left: -1em;
+  padding-right: 0.5em;
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose a {
+  @apply transition-all decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 underline-offset-2 hover:dark:decoration-neutral-500 decoration-[0.1em];
+}
+
+.prose pre {
+  @apply border border-neutral-800 bg-neutral-900;
+}
+
+.prose code {
+  @apply px-1 py-0.5 border border-stone-600 rounded-sm bg-neutral-900 text-base;
+}
+
+.prose pre code {
+  @apply p-0 bg-transparent;
+  border: initial;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-stone-300;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+pre.astro-code {
+  @apply px-4 py-2 rounded-sm my-6 text-base border border-stone-800 !bg-neutral-900;
+}
