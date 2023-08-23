@@ -27,6 +27,23 @@ html pre, html code {
 }
 
 /* blog post styles */
+.prose table {
+  @apply border border-stone-600 bg-neutral-900 text-base my-6;
+
+  display: block;
+  overflow-x: auto;
+  max-width: fit-content;
+  white-space: nowrap;
+}
+
+.prose table thead {
+  @apply border-b border-stone-600 bg-neutral-800;
+}
+
+.prose table td, .prose table th {
+  @apply p-2;
+}
+
 .prose p + p {
   @apply mt-6;
 }
@@ -85,5 +102,5 @@ pre {
 }
 
 pre.astro-code {
-  @apply px-4 py-2 rounded-sm my-6 text-base border border-stone-800 !bg-neutral-900;
+  @apply px-6 py-4 rounded-sm my-6 text-base border border-stone-600 !bg-neutral-900;
 }
