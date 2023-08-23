@@ -4,21 +4,43 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Balancer from 'react-wrap-balancer'
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+import { SITE_TITLE } from '../consts';
+const { title, summary, publishedAt, heroImage } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={summary} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+      integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"
+    >
 	</head>
-
 	<body>
-		<Header />
-		<main>
-			<article>
+		<Header title={SITE_TITLE} />
+		<main class="mb-12 max-w-3xl mx-auto px-2 sm:px-4 min-h-[80vh] my-8">
+      <div class="flex flex-col space-y-2 my-6">
+        <h1 class="text-4xl font-bold bg-blue-600 px-4 py-2">
+          <Balancer>
+            {title}
+          </Balancer>
+        </h1>
+        <span class="text-stone-500 text-lg font-semibold self-end">
+          <FormattedDate date={publishedAt}  />
+        </span>
+        {heroImage && <img
+          src={heroImage}
+          alt="hero image"
+          class="w-full h-64 object-cover rounded-md border border-stone-600"
+        />}
+      </div>
+			<article class="prose prose-quoteless prose-neutral dark:prose-invert text-lg text-justify mb-8">
+        <slot />
 			</article>
 		</main>
 		<Footer />
