@@ -19,7 +19,9 @@ export interface RepositoryInformation {
 
 const cachePath = './public/.cache/contributions.json'
 
-const fetchRepositoryInformation = async (repository: string): Promise<RepositoryInformation | undefined> => {
+const fetchRepositoryInformation = async (
+  repository: string
+): Promise<RepositoryInformation | undefined> => {
   try {
     const response = await fetch(`https://api.github.com/repos/${repository}`, {
       headers: {
@@ -35,40 +37,53 @@ const fetchRepositoryInformation = async (repository: string): Promise<Repositor
   }
 }
 
-const updateCache = async (data: RepositoryInformation[]): Promise<void> => {
+const updateCache = async (data: Map<string, RepositoryInformation>): Promise<void> => {
   try {
-    await fs.writeFile(cachePath, JSON.stringify(data))
+    await fs.writeFile(cachePath, JSON.stringify([...data]))
   } catch (error) {
     console.error('Error updating cache:', error)
   }
 }
 
-const loadDataFromCache = async (): Promise<RepositoryInformation[]> => {
+const loadDataFromCache = async (): Promise<Map<string, RepositoryInformation>> => {
   try {
     await fs.access(cachePath)
     const cacheContent = await fs.readFile(cachePath, 'utf-8')
-    return JSON.parse(cacheContent)
+    const parsedCache = JSON.parse(cacheContent)
+    return new Map(parsedCache)
   } catch (error) {
     console.error('Error reading cache:', error)
   }
-  return []
+
+  return new Map()
 }
 
 export const get: APIRoute = async () => {
-  let data = await loadDataFromCache()
+  const data = await loadDataFromCache()
 
-  if (data.length === 0) {
-    const repositoriesData = await Promise.all(
-      [...contributionsLinks.contributions, ...contributionsLinks.repositories].map(fetchRepositoryInformation)
+  if (data.size === 0) {
+    const repositoriesData = await Promise.allSettled(
+      [...contributionsLinks.contributions, ...contributionsLinks.repositories].map(
+        fetchRepositoryInformation
+      )
     )
 
-    data = repositoriesData.filter((item) => item !== undefined) as RepositoryInformation[]
+    repositoriesData
+      .filter(
+        (repository): repository is PromiseFulfilledResult<RepositoryInformation> =>
+          repository.status === 'fulfilled'
+      )
+      .map((repository) => repository.value)
+      .map((repository) => repository !== undefined && repository !== null
+        ? data.set(repository.name, repository)
+        : null)
+
     await updateCache(data)
   }
 
   return new Response(
     JSON.stringify({
-      contributions: data
+      contributions: Array.from(data.values())
     }),
     {
       status: 200,
