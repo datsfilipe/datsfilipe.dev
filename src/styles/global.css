@@ -27,6 +27,10 @@ html pre, html code {
 }
 
 /* blog post styles */
+.prose ul {
+  @apply flex flex-col space-y-1 list-disc ml-6;
+}
+
 .prose table {
   @apply border border-stone-600 bg-neutral-900 text-base my-6;
 
