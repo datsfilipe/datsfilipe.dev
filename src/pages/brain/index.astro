@@ -1,0 +1,26 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { TreeView } from '../../components/TreeView';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const notes = (await getCollection('brain'));
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main class="mb-12 max-w-7xl mx-auto px-2 sm:px-4 min-h-[80vh] my-8">
+			<aside>
+        <TreeView client:visible notes={notes} />
+			</aside>
+		</main>
+		<Footer/>
+	</body>
+</html>
