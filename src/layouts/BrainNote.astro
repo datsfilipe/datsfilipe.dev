@@ -1,16 +1,14 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Balancer from 'react-wrap-balancer'
-import { TreeView } from '../components/TreeView';
-
-type Props = CollectionEntry<'brain'>['data'];
+import TreeView from '../components/TreeView';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-const notes = (await getCollection('brain'));
+const notes = (await getCollection('brain')).filter(note => note.slug !== 'readme')
 const { pathname } = Astro.url;
 
 const { title } = Astro.props;

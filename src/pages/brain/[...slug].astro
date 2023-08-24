@@ -3,12 +3,12 @@ import BrainNote from '../../layouts/BrainNote.astro';
 import { CollectionEntry, getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-	const notes = await getCollection('brain');
-	return notes.map((note) => ({
+  const notes = (await getCollection('brain')).filter(note => note.slug !== 'readme');
+  return notes.map((note) => ({
 		params: { slug: note.slug },
 		props: note,
-	}));
-}
+	}))
+};
 type Props = CollectionEntry<'brain'>;
 
 const note = Astro.props;
