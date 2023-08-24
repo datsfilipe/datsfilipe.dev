@@ -76,7 +76,7 @@ export default function TreeView ({ notes, pathname }: {
           const isFolder = value instanceof Map
 
           return (
-            <li key={key} className="first:mt-2 text-stone-600">
+            <li key={key} className="first:mt-2 text-stone-300">
               <TreeNode
                 isFolder={isFolder}
                 pathname={pathname}
@@ -88,7 +88,7 @@ export default function TreeView ({ notes, pathname }: {
                       open={isOpened}
                     />
                   )}
-                  <span className='text-left text-stone-300'>
+                  <span className='text-left'>
                     {isFolder ? key : value.title}
                   </span>
                 </button>

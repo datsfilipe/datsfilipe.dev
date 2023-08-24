@@ -6,7 +6,7 @@ import {
 
 export default function CollapseIcon ({ open }: { open: boolean }): ReactNode {
   return (
-    <span className="mr-1">
+    <span className="mr-1 text-stone-600">
       {open
         ? <PiCaretDown />
         : <PiCaretRight />
