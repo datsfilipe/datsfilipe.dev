@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
 import {
-  FaAngleRight,
-  FaAngleDown
-} from 'react-icons/fa'
+  PiCaretRight,
+  PiCaretDown
+} from 'react-icons/pi'
 
 export const CollapseIcon = ({
   open
@@ -13,8 +13,8 @@ export const CollapseIcon = ({
   return (
     <span className="mr-1">
       {open
-        ? <FaAngleDown />
-        : <FaAngleRight />
+        ? <PiCaretDown />
+        : <PiCaretRight />
       }
     </span>
   )
