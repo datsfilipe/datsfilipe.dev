@@ -15,11 +15,11 @@ const entries = notes.map(note => {
 ---
 <aside class="min-w-[18rem] mr-8 flex-shrink-0 space-y-2 mt-6">
   <Searchbox
-    client:visible
+    client:load
     entries={entries}
   />
   <TreeView
-    client:visible
+    client:load
     notes={notes}
     pathname={pathname}
   />
