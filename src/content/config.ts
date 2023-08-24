@@ -18,6 +18,11 @@ const blog = defineCollection({
 
 export const notesSchema = z.object({
   title: z.string(),
+  publishedAt: z
+    .string()
+    .or(z.date())
+    .transform((val) => new Date(val))
+    .optional(),
   relatedPosts: z.array(reference('blog')).optional(),
   relatedNotes: z.array(reference('notes')).optional()
 })
