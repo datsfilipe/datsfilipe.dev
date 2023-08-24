@@ -1,0 +1,48 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Balancer from 'react-wrap-balancer'
+import { TreeView } from '../components/TreeView';
+
+type Props = CollectionEntry<'brain'>['data'];
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const notes = (await getCollection('brain'));
+const { pathname } = Astro.url;
+
+const { title } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={SITE_DESCRIPTION} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+      integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"
+    >
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main class="flex mb-12 max-w-7xl mx-auto px-2 sm:px-4 min-h-[80vh] my-8">
+			<aside class="min-w-[20rem]">
+        <TreeView client:visible notes={notes} pathname={pathname} />
+			</aside>
+      <section>
+        <div class="flex flex-col space-y-2 my-6">
+          <h1 class="text-4xl font-bold bg-blue-600 px-4 py-2">
+            <Balancer>
+              {title}
+            </Balancer>
+          </h1>
+        </div>
+        <article class="prose prose-quoteless prose-neutral dark:prose-invert text-lg text-justify mb-8">
+          <slot />
+        </article>
+      </section>
+		</main>
+		<Footer/>
+	</body>
+</html>
