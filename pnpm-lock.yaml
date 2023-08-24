@@ -36,8 +36,8 @@ dependencies:
     specifier: ^18.0.0
     version: 18.2.0(react@18.2.0)
   react-icons:
-    specifier: ^4.10.1
-    version: 4.10.1(react@18.2.0)
+    specifier: npm:@lorenzobloedow/react-icons@^1.0.0
+    version: /@lorenzobloedow/react-icons@1.0.0(react@18.2.0)
   react-wrap-balancer:
     specifier: ^1.1.0
     version: 1.1.0(react@18.2.0)
@@ -979,6 +979,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@lorenzobloedow/react-icons@1.0.0(react@18.2.0):
+    resolution: {integrity: sha512-fYFjTw9jS66XNvcQvmGZlJYMGT5hzZctnKAWmi4WCPXBNt6CUw4qF4iid+9GrhCahwlSgRFKpry5Nf2/n1rYdg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@mdx-js/mdx@2.3.0:
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
@@ -4557,14 +4565,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-icons@4.10.1(react@18.2.0):
-    resolution: {integrity: sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==}
-    peerDependencies:
-      react: '*'
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-is@16.13.1:
