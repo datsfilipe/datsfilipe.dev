@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content'
+import { defineCollection, reference, z } from 'astro:content'
 
 const blog = defineCollection({
   schema: z.object({
@@ -16,4 +16,14 @@ const blog = defineCollection({
   })
 })
 
-export const collections = { blog }
+export const notesSchema = z.object({
+  title: z.string(),
+  relatedPosts: z.array(reference('blog')).optional(),
+  relatedNotes: z.array(reference('notes')).optional()
+})
+
+const brain = defineCollection({
+  schema: notesSchema
+})
+
+export const collections = { blog, brain }
