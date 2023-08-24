@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import TreeView from './TreeView'
+import Searchbox from './Searchbox'
+
+const { pathname } = Astro.url;
+
+const notes = (await getCollection('brain')).filter(note => note.slug !== 'readme')
+const entries = notes.map(note => {
+  return {
+    slug: note.slug,
+    title: note.data.title
+  }
+})
+---
+<aside class="min-w-[18rem] mr-8 flex-shrink-0 space-y-2 mt-6">
+  <Searchbox
+    client:visible
+    entries={entries}
+  />
+  <TreeView
+    client:visible
+    notes={notes}
+    pathname={pathname}
+  />
+</aside>

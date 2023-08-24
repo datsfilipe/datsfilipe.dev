@@ -106,7 +106,7 @@ export default function TreeView ({ notes, pathname }: {
   }
 
   return (
-    <ul className="mt-8 flex flex-col space-y-2 max-w-[18rem] p-2">
+    <ul className="flex flex-col space-y-2 max-w-[18rem] p-2 -ml-6">
       {renderTree(tree)}
     </ul>
   )
