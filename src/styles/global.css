@@ -53,7 +53,7 @@ html pre, html code {
 }
 
 .prose .anchor {
-  @apply no-underline text-2xl font-bold relative;
+  @apply no-underline text-2xl font-bold relative text-white;
 
   max-width: 80%;
   line-height: 6rem;
@@ -75,7 +75,7 @@ html pre, html code {
 }
 
 .prose a {
-  @apply transition-all decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 underline-offset-2 hover:dark:decoration-neutral-500 decoration-[0.1em];
+  @apply transition-all decoration-blue-600 text-blue-500;
 }
 
 .prose pre {
@@ -107,4 +107,9 @@ pre {
 
 pre.astro-code {
   @apply px-6 py-4 rounded-sm my-6 text-base border border-stone-600 !bg-neutral-900;
+}
+
+/* this one if for the /brain route content to appear right */
+.prose #fork-my-brain + p, .prose #fork-my-brain {
+  @apply hidden;
 }
