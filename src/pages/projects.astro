@@ -6,9 +6,13 @@ import Card from '../components/Card.astro';
 import type { RepositoryInformation } from './api/contributions.json'
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+let contributions: RepositoryInformation[] = [];
 
 const response = await fetch(Astro.url.origin + '/api/contributions.json');
-const { contributions }: { contributions: RepositoryInformation[] } = await response.json();
+if (response.ok) {
+  const { contributions: contributionsParsed } = await response.json();
+  contributions = contributionsParsed;
+}
 ---
 
 <!DOCTYPE html>
@@ -23,7 +27,7 @@ const { contributions }: { contributions: RepositoryInformation[] } = await resp
         Projects!
       </h1>
       <ul class="grid grid-cols-1 mt-4 sm:grid-cols-2 gap-4">
-        {contributions.sort((a, b) => b.stargazers_count - a.stargazers_count)
+        {contributions.length && contributions.sort((a, b) => b.stargazers_count - a.stargazers_count)
           .filter(contribution => contribution.stargazers_count >= 0)
           .map(contribution => (
             <li>
