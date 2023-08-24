@@ -1,5 +1,8 @@
 ---
-import { FaStar, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import {
+  PiStarBold
+} from 'react-icons/pi';
 const { contribution } = Astro.props;
 ---
 <div class="flex flex-col p-4 h-full bg-stone-600">
@@ -16,8 +19,8 @@ const { contribution } = Astro.props;
       </h2>
     </a>
     <span class="flex items-center space-x-1">
-      <FaStar size={18} />
-      <span class="font-mono mt-[5px]">{contribution.stargazers_count}</span>
+      <PiStarBold size={18} />
+      <span class="font-mono mt-[3px]">{contribution.stargazers_count}</span>
     </span>
   </div>
   <div class="flex flex-col h-full my-4">
