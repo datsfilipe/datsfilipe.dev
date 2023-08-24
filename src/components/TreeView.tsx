@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-import { CollapseIcon } from './CollapseIcon'
+import CollapseIcon from './CollapseIcon'
+import TreeNode from './TreeNode'
 import type { z } from 'astro/zod'
 import type { notesSchema } from '../content/config'
 
@@ -11,41 +12,13 @@ interface NoteNode {
 }
 
 type MapOrObject<T> = Map<string, MapOrObject<T>> | T
-interface TreeNode<T> extends Map<string, MapOrObject<T>> {}
+interface ITreeView<T> extends Map<string, MapOrObject<T>> {}
 
-const Node = ({ children, isFolder, pathname, slug }: {
-  children: ReactNode
-  isFolder: boolean
-  pathname?: string
-  slug?: string | undefined
-}): ReactNode => {
-  if (!isFolder) {
-    const href = slug !== undefined ? `/brain/${slug}` : ''
-
-    return (
-      <a
-        className={`flex flex-col pl-[1.5rem] ml-[0.45rem] py-1 border-l border-stone-700 hover:brightness-100 hover:border-blue-600 hover:text-blue-600 ${
-          pathname === href ? 'text-blue-600 !border-blue-600' : ''
-        }`}
-        href={href}
-      >
-        {children}
-      </a>
-    )
-  }
-
-  return (
-    <div className="flex flex-col ml-4 my-1">
-      {children}
-    </div>
-  )
-}
-
-export const TreeView = ({ notes, pathname }: {
+export default function TreeView ({ notes, pathname }: {
   notes: Array<{ slug: string, data: NoteData }>
   pathname?: string
-}): ReactNode => {
-  const [tree, setTree] = useState<TreeNode<NoteNode>>(new Map())
+}): ReactNode {
+  const [tree, setTree] = useState<ITreeView<NoteNode>>(new Map())
   const [openedNodes, setOpenedNodes] = useState<Set<string>>(new Set())
 
   useEffect(() => {
@@ -82,7 +55,7 @@ export const TreeView = ({ notes, pathname }: {
     })
   }
 
-  const renderTree = (tree: TreeNode<NoteNode>): ReactNode => {
+  const renderTree = (tree: ITreeView<NoteNode>): ReactNode => {
     const sortedEntries = Array.from(tree.entries()).sort(([keyA, valueA], [keyB, valueB]) => {
       const isFolderA = valueA instanceof Map
       const isFolderB = valueB instanceof Map
@@ -101,11 +74,10 @@ export const TreeView = ({ notes, pathname }: {
         {sortedEntries.map(([key, value]) => {
           const isOpened = openedNodes.has(key)
           const isFolder = value instanceof Map
-          const isPageOpened = !isFolder && pathname === value.slug
 
           return (
-            <li key={key} className="first:mt-2 text-stone-300">
-              <Node
+            <li key={key} className="first:mt-2 text-stone-600">
+              <TreeNode
                 isFolder={isFolder}
                 pathname={pathname}
                 slug={!isFolder ? value.slug : undefined}
@@ -116,16 +88,16 @@ export const TreeView = ({ notes, pathname }: {
                       open={isOpened}
                     />
                   )}
-                  <span className='text-left'>
+                  <span className='text-left text-stone-300'>
                     {isFolder ? key : value.title}
                   </span>
                 </button>
                 {isFolder && (
                   <ul className="flex flex-col">
-                    {isOpened && renderTree(value as TreeNode<NoteNode>)}
+                    {isOpened && renderTree(value as ITreeView<NoteNode>)}
                   </ul>
                 )}
-              </Node>
+              </TreeNode>
             </li>
           )
         })}

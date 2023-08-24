@@ -4,12 +4,7 @@ import {
   PiCaretDown
 } from 'react-icons/pi'
 
-export const CollapseIcon = ({
-  open
-}: {
-  open: boolean
-  onClick?: () => void
-}): ReactNode => {
+export default function CollapseIcon ({ open }: { open: boolean }): ReactNode {
   return (
     <span className="mr-1">
       {open
