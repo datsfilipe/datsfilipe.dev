@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+.netlify
 
 # testing
 /coverage
@@ -59,4 +59,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
->>>>>>> 5f90c4c (chore: initial commit from astro blog starter)
