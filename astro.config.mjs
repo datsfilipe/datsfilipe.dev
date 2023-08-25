@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
+import node from '@astrojs/node'
 
 import remarkMath from 'remark-math'
 import rehypeSlug from 'rehype-slug'
@@ -12,6 +13,10 @@ import rehypeKatex from 'rehype-katex'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
+  output: 'hybrid',
+  adapter: node({
+    mode: 'standalone',
+  }),
   integrations: [mdx({
     extendMarkdownConfig: true
   }), sitemap(), react(), tailwind()],
