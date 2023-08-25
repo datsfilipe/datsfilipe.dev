@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
-    "@astrojs/node": "^5.3.6",
     "@astrojs/react": "^2.3.2",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
@@ -19,6 +18,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "astro": "^2.10.14",
+    "functions": "link:@astrojs/netlify/functions",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "npm:@lorenzobloedow/react-icons@^1.0.0",

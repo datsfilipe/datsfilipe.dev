@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import react from '@astrojs/react'
 import tailwind from '@astrojs/tailwind'
-import node from '@astrojs/node'
+import netlify from '@astrojs/netlify/functions';
 
 import remarkMath from 'remark-math'
 import rehypeSlug from 'rehype-slug'
@@ -14,9 +14,7 @@ import rehypeKatex from 'rehype-katex'
 export default defineConfig({
   site: 'https://example.com',
   output: 'hybrid',
-  adapter: node({
-    mode: 'standalone',
-  }),
+  adapter: netlify(),
   integrations: [mdx({
     extendMarkdownConfig: true
   }), sitemap(), react(), tailwind()],
