@@ -10,6 +10,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 const repositories: RepositoryInformation[] = []
 const response = await fetch(Astro.url.origin + '/api/contributions.json');
 
+export const prerender = false;
+
 try {
   const json = await response.json();
   repositories.push(...json);
