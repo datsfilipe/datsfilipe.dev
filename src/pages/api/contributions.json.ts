@@ -21,8 +21,6 @@ const repositoryInformationSchema = z.object({
 
 export type RepositoryInformation = z.infer<typeof repositoryInformationSchema>
 
-const cacheFilePath = './public/.cache/contributions.json'
-
 const fetchRepository = async (repository: string): Promise<Response> => {
   try {
     const response = await fetch(`https://api.github.com/repos/${repository}`, {
@@ -54,28 +52,6 @@ const parseRepository = async (repository: string): Promise<RepositoryInformatio
   }
 }
 
-const updateCache = async (data: Map<string, RepositoryInformation>): Promise<void> => {
-  try {
-    await fs.writeFile(cacheFilePath, JSON.stringify([...data]))
-  } catch (error) {
-    console.error('Error updating cache:', error)
-  }
-}
-
-const loadDataFromCache = async (): Promise<Map<string, RepositoryInformation> | undefined> => {
-  try {
-    await fs.access(cacheFilePath)
-    const cacheContent = await fs.readFile(cacheFilePath, 'utf-8')
-    const parsedCache = JSON.parse(cacheContent)
-    return new Map(parsedCache)
-  } catch (error) {
-    console.error('Error reading cache:', error)
-    await fs.mkdir('./public/.cache', { recursive: true })
-  }
-
-  return undefined
-}
-
 const formatRepository = (repository: RepositoryInformation): RepositoryInformation => {
   return {
     name: repository.name,
@@ -91,52 +67,26 @@ const formatRepository = (repository: RepositoryInformation): RepositoryInformat
   }
 }
 
-const getUpdatedRepositoryInformation = async (
-  data: Map<string, RepositoryInformation>
-): Promise<void> => {
-  const repositories = [...contributionsLinks.contributions, ...contributionsLinks.repositories]
-  repositories.map(
-    async (repository: string) => {
-      if (!data.has(repository)) {
-        const parsedRepository = await parseRepository(repository)
-
-        if (parsedRepository !== undefined) {
-          data.set(repository, formatRepository(parsedRepository))
-        }
-
-        await updateCache(data)
-        console.warn('[warn] Updated cache')
-      }
-    }
-  )
-}
-
 const loadRepositoriesData = async (): Promise<Map<string, RepositoryInformation> | undefined> => {
   try {
-    const data = await loadDataFromCache()
+    const data = new Map<string, RepositoryInformation>()
 
-    if (data !== undefined) {
-      await getUpdatedRepositoryInformation(data)
-      return data
-    } else {
-      const newData = new Map()
+    const newData = new Map()
 
-      const repositories = [...contributionsLinks.contributions, ...contributionsLinks.repositories]
-      await Promise.all(
-        repositories.map(
-          async (repository: string) => {
-            const parsedRepository = await parseRepository(repository)
+    const repositories = [...contributionsLinks.contributions, ...contributionsLinks.repositories]
+    await Promise.all(
+      repositories.map(
+        async (repository: string) => {
+          const parsedRepository = await parseRepository(repository)
 
-            if (parsedRepository !== undefined) {
-              newData.set(repository, formatRepository(parsedRepository))
-            }
+          if (parsedRepository !== undefined) {
+            newData.set(repository, formatRepository(parsedRepository))
           }
-        )
+        }
       )
+    )
 
-      await updateCache(newData)
-      return newData
-    }
+    return newData
   } catch (error) {
     console.error('Error loading repositories data:', error)
     return undefined
@@ -146,6 +96,7 @@ const loadRepositoriesData = async (): Promise<Map<string, RepositoryInformation
 export const get: APIRoute = async () => {
   try {
     const data = await loadRepositoriesData()
+
     if (data !== undefined && data.size > 0) {
       return {
         status: 200,
