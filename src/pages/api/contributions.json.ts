@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro'
-import fs from 'node:fs/promises'
 import { z } from 'astro/zod'
 
 import contributionsLinks from '../../resources/contributions.json'
