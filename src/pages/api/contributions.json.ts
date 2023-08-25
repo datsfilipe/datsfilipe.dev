@@ -3,6 +3,7 @@ import fs from 'node:fs/promises'
 import { z } from 'astro/zod'
 
 import contributionsLinks from '../../resources/contributions.json'
+
 const ghToken = import.meta.env.GITHUB_TOKEN as string
 
 const repositoryInformationSchema = z.object({
@@ -148,9 +149,6 @@ export const get: APIRoute = async () => {
     if (data !== undefined && data.size > 0) {
       return {
         status: 200,
-        headers: {
-          'content-type': 'application/json'
-        },
         body: JSON.stringify(Array.from(data.values()))
       }
     } else {
