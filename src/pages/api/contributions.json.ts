@@ -69,6 +69,7 @@ const loadDataFromCache = async (): Promise<Map<string, RepositoryInformation> |
     return new Map(parsedCache)
   } catch (error) {
     console.error('Error reading cache:', error)
+    await fs.mkdir('./public/.cache', { recursive: true })
   }
 
   return undefined
@@ -153,9 +154,7 @@ export const get: APIRoute = async () => {
         body: JSON.stringify(Array.from(data.values()))
       }
     } else {
-      return new Response(JSON.stringify({
-        error: 'Data not found'
-      }), {
+      return new Response(JSON.stringify([]), {
         status: 404,
         headers: {
           'content-type': 'application/json'
@@ -164,9 +163,7 @@ export const get: APIRoute = async () => {
     }
   } catch (error) {
     console.error('Error loading repositories data:', error)
-    return new Response(JSON.stringify({
-      error: 'Unknown error loading data'
-    }), {
+    return new Response(JSON.stringify([]), {
       status: 500,
       headers: {
         'content-type': 'application/json'
