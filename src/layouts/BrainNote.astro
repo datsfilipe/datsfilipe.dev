@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
-import Balancer from 'react-wrap-balancer'
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
@@ -25,9 +24,7 @@ const { title } = Astro.props;
       <section>
         <div class="flex flex-col space-y-2 my-6">
           <h1 class="text-4xl font-bold bg-blue-600 px-4 py-2">
-            <Balancer>
-              {title}
-            </Balancer>
+            {title}
           </h1>
         </div>
         <article class="prose prose-quoteless prose-neutral dark:prose-invert text-lg text-justify mb-8">

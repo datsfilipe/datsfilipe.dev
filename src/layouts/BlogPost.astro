@@ -4,7 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Balancer from 'react-wrap-balancer'
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -14,7 +13,7 @@ const { title, summary, publishedAt, heroImage } = Astro.props;
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={summary} />
+		<BaseHead title={title} description={summary}/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
@@ -22,16 +21,14 @@ const { title, summary, publishedAt, heroImage } = Astro.props;
     >
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
+		<Header title={SITE_TITLE}/>
 		<main class="mb-12 max-w-3xl mx-auto px-2 sm:px-4 min-h-[80vh] my-8">
       <div class="flex flex-col space-y-2 my-6">
         <h1 class="text-4xl font-bold bg-blue-600 px-4 py-2">
-          <Balancer>
-            {title}
-          </Balancer>
+          {title}
         </h1>
         <span class="text-stone-500 text-lg font-semibold self-end">
-          <FormattedDate date={publishedAt}  />
+          <FormattedDate date={publishedAt}/>
         </span>
         {heroImage && <img
           src={heroImage}
@@ -43,6 +40,6 @@ const { title, summary, publishedAt, heroImage } = Astro.props;
         <slot />
 			</article>
 		</main>
-		<Footer />
+		<Footer/>
 	</body>
 </html>
