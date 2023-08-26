@@ -3,21 +3,28 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Card from '../components/Card.astro';
-import type { RepositoryInformation } from './api/contributions.json'
-
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-const repositories: RepositoryInformation[] = []
-const response = await fetch(Astro.url.origin + '/api/contributions.json');
+import contributions from '../resources/contributions.json'
 
-export const prerender = false;
-
-try {
-  const json = await response.json();
-  repositories.push(...json);
-} catch (error) {
-  console.error(error);
+type RepositoryInformation = {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  owner: {
+    login: string;
+    avatar_url: string;
+  },
+  stargazers_count: number;
+  language: string;
 }
+
+const repositories = new Map(
+  contributions.map(([key, value]) => {
+    return [key, value];
+  })
+) as Map<string, RepositoryInformation>;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -34,11 +41,11 @@ try {
         I have a lot of projects done, some of them might not be on this list and some on the list might not interest you either. Also, I've added some of the projects I've contributed to that I enjoy the most.
       <ul class="grid grid-cols-1 mt-4 sm:grid-cols-2 gap-4">
         {
-          repositories.length === 0 ? (
+          repositories.size === 0 ? (
             <li class="text-lg text-red-500 font-semibold">
               No repositories found
             </li>
-          ) : repositories
+          ) : Array.from(repositories.values())
             .sort((a, b) => b.stargazers_count - a.stargazers_count)
             .filter(repository => repository.stargazers_count >= 0)
             .map((repository) => (

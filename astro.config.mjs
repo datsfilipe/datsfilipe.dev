@@ -7,13 +7,10 @@ import remarkMath from 'remark-math';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeKatex from 'rehype-katex';
-import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  output: 'hybrid',
-  adapter: netlify(),
   integrations: [mdx({
     extendMarkdownConfig: true
   }), sitemap(), react(), tailwind()],
