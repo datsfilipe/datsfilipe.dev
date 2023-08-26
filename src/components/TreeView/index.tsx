@@ -7,8 +7,8 @@ import TreeButton from './TreeButton'
 import TreeIcon from './TreeIcon'
 
 export const Tree = {
-  List: TreeList,
   Item: TreeItem,
+  List: TreeList,
   Node: TreeNode,
   Content: TreeContent,
   Button: TreeButton,
