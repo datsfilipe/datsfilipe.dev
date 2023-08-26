@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import TreeView from './TreeView'
+import ComposedTree from './ComposedTree'
 import Searchbox from './Searchbox'
 
 const { pathname } = Astro.url;
@@ -18,7 +18,7 @@ const entries = notes.map(note => {
     client:load
     entries={entries}
   />
-  <TreeView
+  <ComposedTree
     client:load
     notes={notes}
     pathname={pathname}
