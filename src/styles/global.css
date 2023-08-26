@@ -45,7 +45,7 @@ html pre, html code {
 }
 
 .prose table td, .prose table th {
-  @apply p-2;
+  @apply p-2 border border-stone-600;
 }
 
 .prose p + p {
