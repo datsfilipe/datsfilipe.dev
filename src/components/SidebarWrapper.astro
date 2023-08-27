@@ -1,0 +1,15 @@
+---
+import Dropdown from './Dropdown';
+---
+<aside class="sm:mr-8 flex-shrink-0 space-y-2">
+  <div class="sm:block hidden">
+    <slot/>
+  </div>
+  <div class="sm:hidden block">
+    <Dropdown
+      client:load
+    >
+      <slot/>
+    </Dropdown>
+  </div>
+</aside>

@@ -14,9 +14,9 @@ import {
   SOCIAL,
 } from '../consts';
 ---
-<ul class="flex-col">
+<ul class="sm:flex-col flex-row flex-wrap sm:flex-nowrap px-4 sm:px-0 mb-4 sm:mb-0 justify-center sm:justify-normal">
   {SOCIAL.map(item => (
-    <li class="flex items-center space-x-2 space-y-2">
+    <li class="flex items-center space-x-2 space-y-2 mr-2 sm:mr-0">
       <span>~</span>
       <span class:list={["p-1 rounded-md", {
         "bg-blue-800": item.name.toLowerCase().includes('email'),
