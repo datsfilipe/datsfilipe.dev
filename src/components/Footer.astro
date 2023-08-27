@@ -1,12 +1,7 @@
 ---
 const today = new Date();
-
-const { pathname } = Astro.url;
 ---
 
-<footer class:list={[{
-  "absolute bottom-0 left-0 right-0 text-center text-stone-400 p-4": pathname === "/",
-  "flex w-full p-4 mt-4 text-stone-400": pathname !== "/"
-}]}>
+<footer class="flex w-full p-4 mt-4 text-stone-400">
 	<span class="mx-auto">&copy; {today.getFullYear()} Filipe Lima. All rights reserved.</span>
 </footer>
