@@ -37,7 +37,8 @@ export default function Node ({
       <a
         className={node({
           type,
-          active: pathname === href
+          active: (pathname ?? '')
+            .replace(/\/$/, '') === href
         })}
         href={href}
       >
