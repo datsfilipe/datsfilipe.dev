@@ -1,0 +1,60 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import contributions from '../resources/contributions.json'
+
+type RepositoryInformation = {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  owner: {
+    login: string;
+    avatar_url: string;
+  },
+  stargazers_count: number;
+  language: string;
+}
+
+const repositories = new Map(
+  contributions.map(([key, value]) => {
+    return [key, value];
+  })
+) as Map<string, RepositoryInformation>;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main class="mb-12 max-w-3xl mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-8 mt-8 px-4 py-2 bg-blue-600 w-fit">
+        Projects or Contributions!
+      </h1>
+      <p class="text-lg mb-8 text-justify">
+        I have a lot of projects done, some of them might not be on this list and some on the list might not interest you either. Also, I've added some of the projects I've contributed to that I enjoy the most.
+      <ul class="grid grid-cols-1 mt-4 sm:grid-cols-2 gap-4">
+        {
+          repositories.size === 0 ? (
+            <li class="text-lg text-red-500 font-semibold">
+              No repositories found
+            </li>
+          ) : Array.from(repositories.values())
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .filter(repository => repository.stargazers_count >= 0)
+            .map((repository) => (
+              <Card contribution={repository} />
+            )
+          )
+        }
+      </ul>
+    </main>
+  </body>
+  <Footer/>
+</html>
