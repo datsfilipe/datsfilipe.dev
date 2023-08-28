@@ -31,13 +31,15 @@ export default function Node ({
   if (type === undefined) return null
 
   if (type !== 'folder') {
+    const href = '/brain/' + (slug ?? '')
+
     return (
       <a
         className={node({
           type,
-          active: pathname === slug
+          active: pathname === href
         })}
-        href={'/brain/' + (slug ?? '')}
+        href={href}
       >
         {children}
       </a>
