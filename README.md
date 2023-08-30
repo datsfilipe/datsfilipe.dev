@@ -5,9 +5,9 @@
 This project is using [Astro](https://astro.build). It's my personal website, enjoy.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/181a3fda-aad4-4122-a222-c940718a5a8b/deploy-status)](https://app.netlify.com/sites/gentle-crostata-5b4d4a/deploys)
-[![GitHub stars](https://img.shields.io/github/stars/username/repo-name.svg)](https://github.com/username/repo-name/stargazers)
-![Repository Size](https://img.shields.io/github/repo-size/username/repo-name.svg)
-![Last Commit](https://img.shields.io/github/last-commit/username/repo-name.svg)
+[![GitHub stars](https://img.shields.io/github/stars/datsfilipe/datsfilipe.dev.svg)](https://github.com/datsfilipe/datsfilipe.dev/stargazers)
+![Repository Size](https://img.shields.io/github/repo-size/datsfilipe/datsfilipe.dev.svg)
+![Last Commit](https://img.shields.io/github/last-commit/datsfilipe/datsfilipe.dev.svg)
 
 </div>
 
