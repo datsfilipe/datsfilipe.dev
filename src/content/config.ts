@@ -1,4 +1,5 @@
 import { defineCollection, reference, z } from 'astro:content'
+import { getImages } from '../utils/getImages'
 
 const blog = defineCollection({
   schema: z.object({
@@ -15,6 +16,9 @@ const blog = defineCollection({
     heroImage: z.string().optional()
   })
 })
+
+const folderPath = './src/content/brain'
+getImages(folderPath)
 
 export const notesSchema = z.object({
   title: z.string(),
