@@ -1,20 +1,20 @@
 import fs from 'fs'
 import path from 'path'
 
-export const getImages = (folderPath: string) => {
+export const setImages = (folderPath) => {
   const files = fs.readdirSync(folderPath)
-  const images: string[] = []
+  const images = []
 
   files.forEach((file) => {
     const filePath = path.join(folderPath, file)
     const stats = fs.statSync(filePath)
 
     if (stats.isDirectory()) {
-      const nestedImages = getImages(filePath)
+      const nestedImages = setImages(filePath)
       images.push(...nestedImages)
     } else if (/\.(md|mdx)$/.test(file.toLowerCase())) {
       const fileContent = fs.readFileSync(filePath, 'utf-8')
-      const newContent = fileContent.replace(/\!\[([^\]]*)\]\(\.\/([^)]*)\)/g, '![$1]($2/)')
+      const newContent = fileContent.replace(/\!\[([^\]]*)\]\(\.\/([^)]*)\)/g, '![$1](/$2)')
 
       if (newContent !== fileContent) {
         fs.writeFileSync(filePath, newContent)
@@ -34,3 +34,6 @@ export const getImages = (folderPath: string) => {
 
   return images
 }
+
+const folderPath = './src/content/brain'
+setImages(folderPath)
