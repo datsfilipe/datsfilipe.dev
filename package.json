@@ -8,6 +8,7 @@
     "build": "node ./scripts/pre-build.js && astro build",
     "preview": "astro preview",
     "astro": "astro"
+    "test": "vitest"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
@@ -38,5 +39,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "typescript": "^5.2.2"
+    "vitest": "^0.34.4"
   }
 }
