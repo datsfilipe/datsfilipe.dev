@@ -4,6 +4,7 @@ import { getViteConfig } from 'astro/config'
 export default getViteConfig({
   test: {
     globals: true,
-    environment: 'jsdom'
+    environment: 'jsdom',
+    exclude: ['**/node_modules/**', 'src/tests/e2e/**/*']
   }
 })
