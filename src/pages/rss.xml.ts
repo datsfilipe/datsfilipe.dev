@@ -11,14 +11,16 @@ export async function get (context: { site: string | URL }): Promise<{ body: str
       title: post.data.title,
       description: post.data.summary,
       pubDate: post.data.publishedAt,
-      link: `/blog/${post.slug}/`
+      link: `/blog/${post.slug}/`,
+      content: post.body
     })
   }
   for (const note of notes) {
     items.push({
       title: note.data.title,
       link: `/brain/${note.slug}/`,
-      pubDate: note.data.publishedAt !== undefined ? note.data.publishedAt : new Date()
+      pubDate: note.data.publishedAt !== undefined ? note.data.publishedAt : new Date(),
+      content: note.body
     })
   }
 
