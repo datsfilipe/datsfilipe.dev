@@ -2,6 +2,7 @@
 title: "Why aren't you using Astro?"
 publishedAt: "2023-08-17"
 summary: "Why Astro might be the best solution for your next project."
+heroImage: "/blogs/why-arent-you-using-astro/index.png"
 ---
 
 First of all, if you don't know [Astro](https://astro.build) yet, take a look at their website and repository, they're doing a great job. Of course I'm going to tell you what it is here anyways.
