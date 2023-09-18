@@ -10,6 +10,7 @@ export default function TreeButton ({
 }: TreeButtonProps): ReactNode {
   return (
     <button
+      id='toggle'
       role='button'
       aria-label='toggle'
       name='toggle item'
