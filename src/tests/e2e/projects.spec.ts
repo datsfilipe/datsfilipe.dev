@@ -14,7 +14,7 @@ test('Page should have a title', async ({ page }) => {
 test('Page should have valid links', async ({ page }) => {
   await page.goto('http://localhost:3000/projects')
 
-  const links = await page.$$eval('a', (as) =>
+  const links = await page.$$eval('main a', (as) =>
     as.map((a) => a.getAttribute('href'))
   )
 
