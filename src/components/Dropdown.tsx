@@ -40,6 +40,8 @@ export default function Dropdown ({ children, direction, icon }: DropdownProps):
           aria-expanded='true'
           onClick={() => { setIsOpen(!isOpen) }}
           ref={buttonRef}
+          aria-label='open menu'
+          name='options-menu'
         >
           <Icon size={18} />
         </button>

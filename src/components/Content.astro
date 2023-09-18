@@ -10,12 +10,16 @@ import {
 <section class="flex flex-col sm:flex-row justify-between sm:space-x-8 mt-4">
   <div class="flex-shrink-0 items-center">
     <img
+      fetchpriority="high"
       src="https://github.com/datsfilipe.png"
       alt="Filipe's GitHub avatar"
-      class="rounded-lg mx-auto mt-4 mb-2 w-64"
-      loading="lazy"
+      class="rounded-lg mx-auto mt-4 mb-2"
+      width="256"
+      height="256"
     />
-    <h3 class="text-lg font-semibold mt-6 mb-2 text-center sm:text-justify">Social Links!</h3>
+    <span class="w-full mt-6 mb-2 flex justify-center sm:justify-start">
+      <b class="text-lg font-semibold">Social Links!</b>
+    </span>
     <SocialLinks/>
   </div>
   <div class="flex flex-col items-center sm:items-start sm:justify-start mt-4 sm:mt-0">
@@ -26,7 +30,7 @@ import {
       I'm a 21-year-old {ROLE} based in Brazil with a strong focus on crafting user interfaces using JavaScript, TypeScript, and React. I've gained remote development experience and contributed to open source projects.
     </p>
     <p class="my-4 text-justify">
-      In my free time, I indulge in <a href="https://jie-fang.github.io/blog/basics-of-ricing" class="text-blue-500" target="_blank" rel="noopener noreferrer">ricing</a>, gaming, movie watching, and coding personal projects. I'm dedicated to becoming a Fullstack developer and currently exploring Node.js, databases, GraphQL and Rust in pursuit of this goal.
+      In my free time, I indulge in <a aria-label="open" title="article" href="https://jie-fang.github.io/blog/basics-of-ricing" class="text-blue-500" target="_blank" rel="noopener noreferrer">ricing</a>, gaming, movie watching, and coding personal projects. I'm dedicated to becoming a Fullstack developer and currently exploring Node.js, databases, GraphQL and Rust in pursuit of this goal.
     </p>
     <h1 class="text-2xl font-bold my-6">
       Others!
