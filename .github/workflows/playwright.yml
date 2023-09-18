@@ -8,8 +8,6 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
     steps:
     - uses: actions/setup-node@v3
       with:
@@ -18,12 +16,6 @@ jobs:
     - uses: pnpm/action-setup@v2.4.0
       with:
         version: latest
-    - name: Set up SSH Key
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
     - name: Install dependencies
       run: pnpm install
     - name: Install Playwright Browsers
