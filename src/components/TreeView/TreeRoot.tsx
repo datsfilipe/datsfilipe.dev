@@ -33,7 +33,7 @@ const RecursiveRender = ({
       if (retrieveOpenedNodes.includes(key)) {
         setOpenNodes(prev => new Set(prev.add(key)))
       }
-    }, [retrieveOpenedNodes])
+    }, [pathname])
 
     return (
       <Tree.Item key={key}>
