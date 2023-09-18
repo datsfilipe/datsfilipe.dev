@@ -20,6 +20,8 @@ jobs:
       run: pnpm install
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
+    - name: Clone submodules
+      run: git submodule update --init --recursive && git submodule foreach git pull origin main
     - name: Run Playwright tests
       run: (exec pnpm dev &> /dev/null &) && npx wait-on http://localhost:3000 && pnpm test:e2e
     - uses: actions/upload-artifact@v3
