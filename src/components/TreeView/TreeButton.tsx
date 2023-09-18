@@ -12,6 +12,7 @@ export default function TreeButton ({
     <button
       role='button'
       aria-label='toggle'
+      name='toggle item'
       className='flex items-center w-full'
       {...props}
     >
