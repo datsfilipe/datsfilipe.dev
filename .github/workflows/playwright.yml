@@ -20,12 +20,8 @@ jobs:
       run: pnpm install
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
-    - name: Run Project
-      run: pnpm run dev
-    - name: Wait for Project
-      run: npx wait-on http://localhost:3000
     - name: Run Playwright tests
-      run: pnpm exec playwright test
+      run: (exec pnpm dev &> /dev/null &) && npx wait-on http://localhost:3000 && pnpm test:e2e
     - uses: actions/upload-artifact@v3
       if: always()
       with:
