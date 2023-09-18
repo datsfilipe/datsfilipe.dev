@@ -9,7 +9,12 @@ export default function TreeButton ({
   ...props
 }: TreeButtonProps): ReactNode {
   return (
-    <button className='flex items-center w-full' {...props}>
+    <button
+      role='button'
+      aria-label='toggle'
+      className='flex items-center w-full'
+      {...props}
+    >
       {children}
     </button>
   )
