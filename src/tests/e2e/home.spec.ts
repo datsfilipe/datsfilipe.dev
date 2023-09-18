@@ -28,3 +28,23 @@ test('Header should have valid links', async ({ page }) => {
     expect(page.url()).toBe(`http://localhost:3000${link}`)
   }
 })
+
+test('Page should have valid links', async ({ page }) => {
+  await page.goto('http://localhost:3000/')
+
+  const links = await page.$$eval('main a', (as) =>
+    as.map((a) => a.getAttribute('href'))
+  )
+
+  const urlRegex = /^(http:\/\/localhost:3000|https?:\/\/[^\s/$.?#].[^\s]*)$/
+
+  for (const link of links) {
+    if (link !== null) {
+      expect(
+        link.startsWith('http')
+          ? link
+          : `http://localhost:3000${link}`
+      ).toMatch(urlRegex)
+    }
+  }
+})
