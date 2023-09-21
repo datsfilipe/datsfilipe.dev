@@ -33,15 +33,15 @@ export default function Dropdown ({ children, direction, icon }: DropdownProps):
     <div className='relative inline-block text-left'>
       <div>
         <button
+          id='options-menu'
           type='button'
           className='p-2 bg-neutral-800 rounded-sm hover:brightness-75 transition duration-150 ease-in-out'
-          id='options-menu'
           aria-haspopup='true'
           aria-expanded='true'
           onClick={() => { setIsOpen(!isOpen) }}
           ref={buttonRef}
-          aria-label='open menu'
-          name='options-menu'
+          aria-label='Options'
+          name='Options'
         >
           <Icon size={18} />
         </button>

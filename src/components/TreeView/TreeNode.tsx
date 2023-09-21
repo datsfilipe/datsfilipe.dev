@@ -41,7 +41,7 @@ export default function Node ({
             .replace(/\/$/, '') === href
         })}
         href={href}
-        aria-label='open'
+        aria-label={slug}
         title={slug}
       >
         {children}

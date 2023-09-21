@@ -97,7 +97,7 @@ export default function Searchbox (props: SearchboxProps): ReactNode {
                   className={`${index === selectedIndex ? 'bg-neutral-700 selected' : 'hover:bg-neutral-600'} px-4 py-2 cursor-pointer hover:no-underline`}
                   href={`/brain/${entry.slug}`}
                   id={index === selectedIndex ? 'selected' : undefined}
-                  aria-label='select'
+                  aria-label={entry.title}
                   title={entry.title}
                 >
                   {entry.title}
@@ -109,7 +109,7 @@ export default function Searchbox (props: SearchboxProps): ReactNode {
                   className={`${index === selectedIndex ? 'bg-neutral-700 selected' : 'hover:bg-neutral-600'} px-4 py-2 cursor-pointer hover:no-underline`}
                   href={`/brain/${entry.slug}`}
                   id={index === selectedIndex ? 'selected' : undefined}
-                  aria-label='select'
+                  aria-label={entry.title}
                   title={entry.title}
                 >
                   {entry.title}

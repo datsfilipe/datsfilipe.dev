@@ -12,7 +12,7 @@ const { contribution } = Astro.props;
       class="px-4 py-2 bg-stone-800 hover:no-underline"
       rel="noopener noreferrer"
       target="_blank"
-      aria-label="open"
+      aria-label={contribution.name}
       title={contribution.name}
     >
       <h2 class="flex items-center space-x-2 text-xl font-bold">
@@ -34,7 +34,7 @@ const { contribution } = Astro.props;
           class="flex items-center space-x-1"
           rel="noopener noreferrer"
           target="_blank"
-          aria-label="open"
+          aria-label={contribution.name + " deploy"}
           title={contribution.name + " deploy"}
         >
           <span>Deploy</span>
@@ -55,7 +55,7 @@ const { contribution } = Astro.props;
         href={'https://github.com/' + contribution.owner.login}
         rel="noopener noreferrer"
         target="_blank"
-        aria-label="open"
+        aria-label={contribution.owner.login + " github"}
         title={contribution.owner.login + " github"}
       >
         {contribution.owner.login}
