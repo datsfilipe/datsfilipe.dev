@@ -38,6 +38,9 @@ devDependencies:
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.62.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.47.0)(typescript@5.2.2)
+  '@vercel/analytics':
+    specifier: ^1.0.2
+    version: 1.0.2
   astro:
     specifier: ^3.1.0
     version: 3.1.0(@types/node@20.6.2)
@@ -1341,6 +1344,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
+    dev: true
+
+  /@vercel/analytics@1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
     dev: true
 
   /@vitejs/plugin-react@4.0.4(vite@4.4.9):
