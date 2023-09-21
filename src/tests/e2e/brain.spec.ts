@@ -1,18 +1,18 @@
 import { test, expect, type ElementHandle } from '@playwright/test'
 
 test('Page should exist', async ({ page }) => {
-  await page.goto('http://localhost:3000/brain')
+  await page.goto('http://localhost:4321/brain')
   expect(page).toBeDefined()
 })
 
 test('Page should have a title', async ({ page }) => {
-  await page.goto('http://localhost:3000/brain')
+  await page.goto('http://localhost:4321/brain')
   const title = await page.title()
   expect(title).toBe('Fork My Brain')
 })
 
 test('Page should have valid links', async ({ page }) => {
-  await page.goto('http://localhost:3000/brain')
+  await page.goto('http://localhost:4321/brain')
 
   const links: string[] = []
   const ul = await page.$('aside ul')
@@ -42,11 +42,11 @@ test('Page should have valid links', async ({ page }) => {
 
   if (ul !== null) await collectLinks(ul)
 
-  const urlRegex = /^(http:\/\/localhost:3000|https?:\/\/[^\s/$.?#].[^\s]*)$/
+  const urlRegex = /^(http:\/\/localhost:4321|https?:\/\/[^\s/$.?#].[^\s]*)$/
 
   for (const link of links) {
     if (link !== null) {
-      expect(`http://localhost:3000${link}`).toMatch(urlRegex)
+      expect(`http://localhost:4321${link}`).toMatch(urlRegex)
     }
   }
 })
