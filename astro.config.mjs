@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import vercel from "@astrojs/vercel/static";
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
@@ -10,7 +11,13 @@ import rehypeKatex from 'rehype-katex';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://datsfilipe.dev',
+  output: 'static',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   integrations: [mdx({
     extendMarkdownConfig: true
   }), sitemap(), react(), tailwind()],
