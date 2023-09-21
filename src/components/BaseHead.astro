@@ -1,7 +1,5 @@
 ---
-import { Analytics } from '@vercel/analytics/react';
 import { ViewTransitions } from 'astro:transitions';
-
 import '../styles/global.css';
 
 interface Props {
@@ -41,7 +39,6 @@ const { title, description, image = '/blog-placeholder-1.png' } = Astro.props;
 
 <!-- Features -->
 <ViewTransitions />
-<Analytics/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
