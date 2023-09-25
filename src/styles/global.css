@@ -28,7 +28,7 @@ html pre, html code {
 
 /* blog post styles */
 .prose ul {
-  @apply flex flex-col space-y-1 list-disc ml-6;
+  @apply flex flex-col space-y-1 list-disc pl-6 pb-3;
 }
 
 .prose table {
