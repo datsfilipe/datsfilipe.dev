@@ -10,7 +10,7 @@ const node = tv({
     },
     active: {
       never: '',
-      false: 'sm:border-stone-800 hover:border-blue-600 hover:text-blue-600 border-stone-700',
+      false: 'sm:border-stone-800 border-stone-700', 
       true: 'border-blue-600 text-blue-600'
     }
   }
