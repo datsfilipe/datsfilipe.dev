@@ -11,7 +11,7 @@ export const SOCIAL = [
     name: 'Github'
   },
   {
-    link: 'https://twitter.com/datsfilipe',
+    link: 'https://twitter.com/datsfilipe1',
     name: 'Twitter'
   },
   {
