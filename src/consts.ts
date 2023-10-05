@@ -2,9 +2,11 @@ export const SITE_TITLE = 'Filipe Lima'
 export const SITE_DESCRIPTION = 'Welcome to my personal website!'
 
 export const NAME = 'Filipe Lima'
-export const ROLE = 'Frontend Software Engineer'
+export const ROLE = 'Fullstack Software Engineer'
 export const BOOKS = ['Clean Code - Robert C. Martin', 'Metamorphosis - Franz Kafka', 'Fahrenheit 451 - Ray Bradbury', 'The Crow and Other Stories - Edgar Allan Poe']
 export const HOBBIES = ['Linux customization', 'gaming', 'reading', 'coding']
+export const FRONT_STACK = ['TypeScript', 'React', 'JavaScript', 'Next.js', 'Tailwind', 'Vite', 'Astro']
+export const BACK_STACK = ['Node.js', 'Go', 'Express', 'PostgreSQL', 'GraphQL', 'Prisma', 'SQL']
 export const SOCIAL = [
   {
     link: 'https://github.com/datsfilipe',
