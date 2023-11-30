@@ -7,8 +7,8 @@ config({ path: path.join(__dirname, '.env') })
 
 const ghToken = process.env.GH_TOKEN
 const apiUrl = 'https://api.github.com/graphql'
-const query = fs.readFileSync(path.join(__dirname, 'src/utils/ghprojects.graphql'), 'utf8')
-const outputPath = path.join(__dirname, 'src/api/ghprojects.json')
+const query = fs.readFileSync(path.join(__dirname, 'src/utils/query.graphql'), 'utf8')
+const outputPath = path.join(__dirname, 'src/utils/projects.json')
 
 const headers = {
   'Authorization': `Bearer ${ghToken}`,

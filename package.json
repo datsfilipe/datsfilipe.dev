@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "test:e2e": "playwright test",
-    "get-projects": "node src/utils/get-ghprojects.js"
+    "get-projects": "node src/utils/get.js"
   },
   "devDependencies": {
     "@astrojs/mdx": "^1.1.0",
