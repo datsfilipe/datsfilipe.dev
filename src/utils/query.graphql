@@ -3,7 +3,9 @@
     repositories(first: 100, orderBy: { field: STARGAZERS, direction: ASC }) {
       nodes {
         name
+        url
         description
+        homepageUrl
         updatedAt
         defaultBranchRef {
           target {
