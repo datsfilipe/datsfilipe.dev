@@ -1,0 +1,1496 @@
+{
+  "viewer": {
+    "repositories": {
+      "nodes": [
+        {
+          "name": "datsfilipe",
+          "description": "Config files for my GitHub profile.",
+          "updatedAt": "2023-07-18T09:14:18Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-18T18:03:33Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "laravel-calculator",
+          "description": "This project is a calculator made using the Laravel framework. ",
+          "updatedAt": "2021-09-14T14:48:26Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T17:47:32Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "proffys",
+          "description": "A system for students who wants particular classes and for teachers who wants to make those services available.",
+          "updatedAt": "2023-08-20T00:22:03Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-08-20T00:21:25Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "laravel-registration",
+          "description": "This project is a registration app made using Laravel framework.",
+          "updatedAt": "2021-08-30T17:46:02Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T17:44:41Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rsa-python",
+          "description": null,
+          "updatedAt": "2021-09-14T14:49:22Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-09-14T14:49:19Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "support-chat",
+          "description": "An realtime support chat app using Node, Express and websocket.",
+          "updatedAt": "2021-10-14T04:57:49Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-10-14T04:57:46Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "wsnode",
+          "description": "This project is a websocket using Node to create a realtime application.",
+          "updatedAt": "2021-09-14T14:50:10Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T16:55:48Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "discord-bot-js-template",
+          "description": "This project is a default template of Discord bot using Node with JavaScript. ",
+          "updatedAt": "2023-05-04T23:54:02Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T19:38:53Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "events-js",
+          "description": "This project is just a school work where I'd made a html page with js file for exemplification of DOM events.",
+          "updatedAt": "2021-08-30T19:09:03Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T18:58:58Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "react-native-barber-app",
+          "description": "Following a youtube tutorial that's probably on the readme file.",
+          "updatedAt": "2023-01-28T05:10:47Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-07-24T22:31:48Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "qhub",
+          "description": " Letmeask is a room management app, whose functionality is to send or receive questions.",
+          "updatedAt": "2023-08-14T21:26:57Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-15T17:39:27Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "send-mail-api-rest",
+          "description": "This project is implemented in SOLID architecture principles, using Typescript, Express and Mailtrap.",
+          "updatedAt": "2021-09-14T14:50:47Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-30T15:52:45Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "hyper-omni-customized",
+          "description": "Omni Customized for Hyper",
+          "updatedAt": "2021-09-23T14:40:42Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-09-23T14:40:29Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "youtube-clone-discord",
+          "description": "Discord UI clone for study purposes.",
+          "updatedAt": "2021-10-15T12:08:39Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2020-06-16T23:57:31Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nlw-heat-backend",
+          "description": "The backend of a chat app that's being created at NLW Heat event.",
+          "updatedAt": "2021-10-24T21:52:34Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-10-24T21:52:21Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nlw-heat-react",
+          "description": "The web frontend of a chat app that was created at NLW Heat event.",
+          "updatedAt": "2021-11-24T00:51:31Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-10-24T22:51:29Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nlw-heat-react-native",
+          "description": "The mobile version of a chat app that's being created at NLW Heat event. ",
+          "updatedAt": "2021-10-22T18:17:22Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-10-22T18:01:24Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nlw-heat-tags-elixir",
+          "description": "One api in elixir that run every day, taking messages from a database and counting the number of words in the content of these messages.",
+          "updatedAt": "2021-10-23T19:01:50Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-10-23T16:04:53Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "home-dashboard",
+          "description": "A simple homepage modified to serve my needs.",
+          "updatedAt": "2021-11-02T00:43:40Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-11-02T00:37:07Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "discord-bot-template",
+          "description": null,
+          "updatedAt": "2021-11-30T00:10:04Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-08-09T18:57:43Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rseat-github-explorer",
+          "description": "App made at chapter 1 of Ignite.",
+          "updatedAt": "2021-12-18T13:51:45Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-11-30T21:10:12Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "writedown",
+          "description": "✏ writedown - Free and Open Source Writing Platform - Write, Share and Inspire. Now in beta.",
+          "updatedAt": "2023-04-30T23:08:19Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-14T00:54:52Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "central-nickgabe",
+          "description": "Um site para ver assuntos dos quais eu já ensinei.",
+          "updatedAt": "2023-05-04T21:22:05Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-21T23:14:57Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "react-native-md-editor",
+          "description": "Not finished. Started learning `React Native` recently.",
+          "updatedAt": "2023-05-07T02:45:30Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-08T02:42:25Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rust-1st-time",
+          "description": "The basics (do not look here, too ugly).",
+          "updatedAt": "2023-05-23T07:01:43Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-15T03:31:13Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "kv-sketchbook",
+          "description": null,
+          "updatedAt": "2023-05-08T06:23:52Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-09T02:39:15Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "codeleap-engineering-test",
+          "description": "A fun test",
+          "updatedAt": "2023-05-10T23:08:35Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-08T23:36:19Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "vite-plugin-ssr_vercel_build-output-api",
+          "description": null,
+          "updatedAt": "2023-05-13T17:05:54Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-07-24T11:14:49Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "sudoku",
+          "description": "Sudoku game in react.",
+          "updatedAt": "2023-05-23T14:53:28Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-29T17:33:50Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "monkeytype",
+          "description": "The most customizable typing website with a minimalistic design and a ton of features. Test yourself in various modes, track your progress and improve your speed.",
+          "updatedAt": "2023-05-15T21:08:19Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-15T21:06:15Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "storybook-genie",
+          "description": "Storybook Genie is a command line interface tool that can generate Storybook stories from React components",
+          "updatedAt": "2023-05-17T03:18:48Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-08T17:13:30Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "readme-template",
+          "description": "Modelo de readme para projetos",
+          "updatedAt": "2023-05-19T15:25:18Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-19T14:39:12Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "advent-of-rust",
+          "description": "Basically doing advent of code 2022 in Rust.",
+          "updatedAt": "2023-05-23T07:00:56Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-29T14:03:42Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "mario-world",
+          "description": "This has nothing to do with Mario. Learning about monorepos and microservices. Reading and implementing from this code: https://github.com/diego3g/node-microservices-ddd.",
+          "updatedAt": "2023-06-08T12:57:32Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-08-04T15:47:05Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "my-rices",
+          "description": "A Vite + Vue app for showing off some of my rices in r/unixporn.",
+          "updatedAt": "2023-06-09T19:27:35Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-14T04:49:54Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "phived",
+          "description": "phived is a dead-simple, zero-distractions to-do list. you can have up to 5 tasks at a time. to add more tasks, complete some of your ongoing ones. no login, no cookies, no images and no ads. just you and your next few steps.",
+          "updatedAt": "2023-06-13T20:27:33Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-13T09:52:28Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "safe-cats",
+          "description": "Cats saying their takes on tech.",
+          "updatedAt": "2023-06-27T19:42:14Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-23T16:00:57Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "tabnews-clone",
+          "description": "Just mixing up a lot of technologies with someone else's idea but without commercializing it :)",
+          "updatedAt": "2023-07-06T10:32:59Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-11T11:22:43Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "comment-with-github",
+          "description": "Just comment whatever with your github account (not finished).",
+          "updatedAt": "2023-08-04T15:26:36Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-08-04T15:26:01Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "walls",
+          "description": "My wallpaper collection :p",
+          "updatedAt": "2023-08-19T20:07:59Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-24T03:14:55Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "binary-rain",
+          "description": "Created with CodeSandbox",
+          "updatedAt": "2023-08-21T14:01:48Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-08-21T17:27:33Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "fullstack-cool-kids-like",
+          "description": "Merging lots of tech I don't know to make a basic fullstack app and learn some cool things as a cool guy.",
+          "updatedAt": "2023-10-07T14:19:15Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-07T14:18:50Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "DevOps-Roadmap",
+          "description": "DevOps Roadmap for 2023. with learning resources",
+          "updatedAt": "2023-08-29T05:29:52Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-30T14:02:43Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rinha-de-compiler-1",
+          "description": "🥖 | Rinha de compiladores (ou interpretadores kkkk",
+          "updatedAt": "2023-09-13T23:59:24Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-09-13T16:18:54Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "go-simple-api",
+          "description": "Following this: https://dev.to/karanpratapsingh/build-a-rest-api-with-go-for-beginners-3gp",
+          "updatedAt": "2023-09-25T14:32:10Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-09-25T14:49:20Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rinha-backend-go",
+          "description": "A backend challenge, here the instructions (in portuguese):  https://github.com/zanfranceschi/rinha-de-backend-2023-q3/blob/main/INSTRUCOES.md",
+          "updatedAt": "2023-10-02T22:28:27Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-02T22:28:13Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nvim-gh-pr-test",
+          "description": "Just submitting PR's from nvim.",
+          "updatedAt": "2023-10-01T05:12:00Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-01T05:11:15Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "he4rtoberfest-2023",
+          "description": "Repo oficial do He4rtoberfest da He4rt Developers 2023",
+          "updatedAt": "2023-10-03T02:32:33Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-03T02:28:16Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "streaming-attempt",
+          "description": "It's using node-media-server to create an rmtp server for livestreaming. Bun btw.",
+          "updatedAt": "2023-10-06T18:31:37Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-06T18:29:25Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rinha-frontend",
+          "description": "Repositório oficial da Rinha de Front-end",
+          "updatedAt": "2023-10-13T18:35:30Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-13T18:34:57Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "unix-scripts",
+          "description": "My scripts to help me use my system. Maybe you will find one of these cool.",
+          "updatedAt": "2023-11-13T19:34:38Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-29T15:27:56Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "webrtc-server",
+          "description": "uh",
+          "updatedAt": "2023-11-17T14:52:58Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-21T05:08:44Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "elixir-inets-server",
+          "description": "Simple elixir server made with Erlang inets API -> https://www.erlang.org/doc/apps/inets",
+          "updatedAt": "2023-11-19T21:02:18Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-19T21:04:25Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "electron-1st-try",
+          "description": null,
+          "updatedAt": "2023-11-29T12:13:15Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-29T12:09:48Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "browser-home",
+          "description": "A Better Home Page for your browser.",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-06-03T03:19:35Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "vs-code-omni-customized",
+          "description": "Personal Customization of Omni for Visual Studio Code",
+          "updatedAt": "2023-06-05T21:53:06Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-09-20T23:12:24Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "wiserick-next-app",
+          "description": "Wise big-headed Rick advises you about whatever he wants.",
+          "updatedAt": "2023-03-07T08:39:43Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-20T15:07:42Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "dtmoney",
+          "description": "Project made on Ignite chapter 2",
+          "updatedAt": "2023-07-21T17:12:20Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-21T18:01:14Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "tech-edu-access",
+          "description": "Basicamente consiste em um texto e uma interface amigável, acredito que ambos sejam bons o suficiente para valer um pouco do seu tempo.",
+          "updatedAt": "2023-05-13T21:43:06Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-05T15:43:36Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "hyper-smooth-theme",
+          "description": "Smooth theme for hyper.",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-29T22:58:17Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "ignews",
+          "description": "Ignews is a news in post format app made in ignite course chapter 03.",
+          "updatedAt": "2023-07-24T18:55:03Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-24T18:44:59Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "dashgo",
+          "description": "A dashboard app called Dashgo and made with Chakra UI.",
+          "updatedAt": "2023-08-30T22:33:23Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-21T18:06:50Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "nextjs-authentication",
+          "description": "Front-end authentication system with Next.js v12 using jwt token and a refresh token system.",
+          "updatedAt": "2023-05-13T21:36:22Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-15T03:29:27Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "componentizing-react-app",
+          "description": null,
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-18T23:02:23Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "acnh-jukebox",
+          "description": "A lil web app that plays K.K. Slider jams like in Animal Crossing: New Horizons!",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-29T05:32:26Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "hyper-site",
+          "description": "The official website for the Hyper terminal",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-12-29T19:38:35Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "learning-vue-with-freecodecamp",
+          "description": "just doing this course here in free time: https://www.youtube.com/watch?v=FXpIoQ_rT_c",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-01-03T19:59:01Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "react-with-script-html-tags",
+          "description": "React with react-router-dom using just html script tags.",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-01-09T03:29:01Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "paradise-vscode",
+          "description": null,
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-02-07T18:42:01Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "node-arch",
+          "description": "Replicating an structured app prototype from Rocketseat content on YT called DECODE#010.",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-03-10T11:55:41Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "octal-back-provider",
+          "description": "Highlight JS language in ES6 template literals",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-03-30T15:09:56Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "github-search-bun-api",
+          "description": "Bun first try.",
+          "updatedAt": "2023-03-07T08:39:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-08-20T02:55:49Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "polyglot-programming-playground",
+          "description": "Just a bunch of code/anotations from my learning activity while watching a programming course at Frontend Masters.",
+          "updatedAt": "2023-06-15T18:46:04Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-06-15T17:56:41Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "node-jokenpo",
+          "description": "Back-end for the https://github.com/datsfilipe/react-jokenpo.",
+          "updatedAt": "2023-05-06T01:58:35Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-12-05T23:26:00Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "react-tic-tac-toe",
+          "description": "Did a tic-tac-toe game in react in order to learn more about some state management libraries.",
+          "updatedAt": "2023-03-07T08:39:43Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-12-24T22:54:19Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "e-sports-hub",
+          "description": null,
+          "updatedAt": "2023-03-07T08:39:43Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-02-05T16:23:14Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "sort-tube",
+          "description": "Search for videos in YouTube with AI sorting results by relevance.",
+          "updatedAt": "2023-06-10T23:45:44Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-20T15:08:43Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "brain",
+          "description": "Notes about topics I'm studying. If you think they're wrong or something, open an issue.",
+          "updatedAt": "2023-11-05T23:56:39Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-10-02T12:29:05Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "list-manager",
+          "description": "Manage todo lists with zero overhead.",
+          "updatedAt": "2023-11-27T23:07:54Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-27T00:35:07Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "todo-app",
+          "description": "Simple React todo app.",
+          "updatedAt": "2023-07-21T17:13:37Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-07-14T19:52:18Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "type-level-typescript-playground",
+          "description": "Learning more of Typescript with: https://type-level-typescript.com lessons.",
+          "updatedAt": "2023-03-07T08:39:43Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2022-11-28T22:05:59Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "datsfilipe.dev",
+          "description": "My personal website 🫠",
+          "updatedAt": "2023-11-14T01:24:19Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-27T18:09:21Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "rinha-de-compiler",
+          "description": "My attempt on creating an interpreter for https://github.com/aripiprazole/rinha-de-compiler.",
+          "updatedAt": "2023-09-25T03:28:34Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-09-22T18:30:21Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "datsnvim",
+          "description": "Mine personal configuration files that turn Neovim text editor into an IDE.",
+          "updatedAt": "2023-11-26T15:43:45Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-29T22:00:56Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "github-search",
+          "description": "Search users and repositories from github.",
+          "updatedAt": "2023-06-27T19:40:54Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-05-13T18:04:54Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "smooth-theme",
+          "description": "A simple two color based theme for BetterDiscord.",
+          "updatedAt": "2023-04-29T19:47:13Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-04-29T19:41:54Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "react-jokenpo",
+          "description": "It's a game of jokenpo made with ReactJS. It's a simple game, but it's a good way to see how React state works.",
+          "updatedAt": "2023-11-13T01:29:48Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-13T01:12:38Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "better-discord",
+          "description": "A Discord Omni Theme for BetterDiscord.",
+          "updatedAt": "2023-05-13T13:34:30Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2021-11-12T18:25:02Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "web-ascii-theater",
+          "description": "Package that exports a component that can be used to play ascii animations inside a React.js application.",
+          "updatedAt": "2023-10-02T13:02:29Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-16T20:50:43Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "gen-readme",
+          "description": "gen-readme wil generate a readme for you! you can even customize it by selecting which sections you want.",
+          "updatedAt": "2023-10-02T13:03:05Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-08-30T22:02:33Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "vercel-ui-clone",
+          "description": "Basically a clone of vercel website in overview section.",
+          "updatedAt": "2023-10-07T08:45:19Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-03-21T23:14:01Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "min-theme.nvim",
+          "description": "Porting Min Theme from Visual Studio Code to Neovim.",
+          "updatedAt": "2023-11-27T08:47:24Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-17T21:07:27Z"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "dotfiles",
+          "description": "Personal config files for NixOS. See my other rices in the link below!",
+          "updatedAt": "2023-11-26T15:14:07Z",
+          "defaultBranchRef": {
+            "target": {
+              "history": {
+                "nodes": [
+                  {
+                    "committedDate": "2023-11-29T19:25:40Z"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
