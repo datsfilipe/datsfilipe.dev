@@ -5,26 +5,105 @@ import Footer from '../components/Footer.astro';
 import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-import contributions from '../resources/contributions.json'
+import projects from '../utils/projects.json'
+const repositories = projects.viewer.repositories.nodes;
 
-type RepositoryInformation = {
-  name: string;
-  description: string | null;
-  html_url: string;
-  homepage: string | null;
-  owner: {
-    login: string;
-    avatar_url: string;
-  },
-  stargazers_count: number;
-  language: string;
-}
+const categories = new Map();
+repositories.forEach(repo => {
+  if ([
+    "web-ascii-theater",
+    "vercel-ui-clone",
+    "datsfilipe.dev",
+    "ignews",
+    "github-search",
+    "dashgo",
+    "tabnews-clone",
+    "my-rices",
+  ].includes(repo.name)) {
+    if (categories.has("Websites")) {
+      categories.get("Websites").push(repo);
+    } else {
+      categories.set("Websites", [repo]);
+    }
+  }
 
-const repositories = new Map(
-  contributions.map(([key, value]) => {
-    return [key, value];
-  })
-) as Map<string, RepositoryInformation>;
+  if ([
+    "unix-scripts",
+    "dotfiles",
+    "datsnvim"
+  ].includes(repo.name)) {
+    if (categories.has("Configurations")) {
+      categories.get("Configurations").push(repo);
+    } else {
+      categories.set("Configurations", [repo]);
+    }
+  }
+
+  if ([
+    "min-theme.nvim",
+    "smooth-theme",
+    "octal-back-provider",
+    "paradise-vscode",
+    "hyper-smooth-theme",
+    "vs-code-omni-customized",
+  ].includes(repo.name)) {
+    if (categories.has("Themes")) {
+      categories.get("Themes").push(repo);
+    } else {
+      categories.set("Themes", [repo]);
+    }
+  }
+
+  if ([
+    "gen-readme",
+    "list-manager",
+  ].includes(repo.name)) {
+    if (categories.has("Tools")) {
+      categories.get("Tools").push(repo);
+    } else {
+      categories.set("Tools", [repo]);
+    }
+  }
+
+  if ([
+    "react-jokenpo",
+    "sudoku",
+    "binary-rain",
+    "safe-cats",
+  ].includes(repo.name)) {
+    if (categories.has("Games/4Fun")) {
+      categories.get("Games/4Fun").push(repo);
+    } else {
+      categories.set("Games/4Fun", [repo]);
+    }
+  }
+
+  if ([
+    "rinha-backend-go",
+    "elixir-inets-server",
+    "webrtc-server"
+  ].includes(repo.name)) {
+    if (categories.has("Backend")) {
+      categories.get("Backend").push(repo);
+    } else {
+      categories.set("Backend", [repo]);
+    }
+  }
+
+  if ([
+    "kv-sketchbook",
+    "storybook-genie",
+    "writedown",
+    "central-nickgabe",
+    "phived",
+  ].includes(repo.name)) {
+    if (categories.has("Cool things I've contributed to")) {
+      categories.get("Cool things I've contributed to").push(repo);
+    } else {
+      categories.set("Cool things I've contributed to", [repo]);
+    }
+  }
+});
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -35,25 +114,28 @@ const repositories = new Map(
 		<Header title={SITE_TITLE} />
 		<main class="mb-12 max-w-3xl mx-auto px-4">
       <h1 class="text-3xl font-bold mb-8 mt-8 px-4 py-2 bg-blue-600 w-fit" transition:animate="slide">
-        Projects or Contributions!
+        Projects!
       </h1>
-      <p class="text-lg mb-8 text-justify">
-        I have a lot of projects done, some of them might not be on this list and some on the list might not interest you either. Also, I've added some of the projects I've contributed to that I enjoy the most.
-      <ul class="grid grid-cols-1 mt-4 sm:grid-cols-2 gap-4">
-        {
-          repositories.size === 0 ? (
-            <li class="text-lg text-red-500 font-semibold">
-              No repositories found
-            </li>
-          ) : Array.from(repositories.values())
-            .sort((a, b) => b.stargazers_count - a.stargazers_count)
-            .filter(repository => repository.stargazers_count >= 0)
-            .map((repository) => (
-              <Card contribution={repository} />
-            )
-          )
-        }
-      </ul>
+      {["Websites", "Configurations", "Themes", "Tools", "Games/4Fun", "Backend", "Cool things I've contributed to"].map(category => (
+        <div class="mb-8">
+          <h2 class="">
+            {category}
+          </h2>
+          {category === "Websites" || category === "Games/4Fun" ? (
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {categories.get(category).map(repo => (
+                <Card repo={repo} category={category} />
+              ))}
+            </div>
+          ) : (
+            <div>
+              {categories.get(category).map(repo => (
+                <Card repo={repo} category={category} />
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
     </main>
   </body>
   <Footer/>
