@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
@@ -42,7 +43,6 @@ repositories.forEach(repo => {
   if ([
     "min-theme.nvim",
     "smooth-theme",
-    "octal-back-provider",
     "paradise-vscode",
     "hyper-smooth-theme",
     "vs-code-omni-customized",
@@ -117,23 +117,13 @@ repositories.forEach(repo => {
         Projects!
       </h1>
       {["Websites", "Configurations", "Themes", "Tools", "Games/4Fun", "Backend", "Cool things I've contributed to"].map(category => (
-        <div class="mb-8">
-          <h2 class="">
-            {category}
-          </h2>
-          {category === "Websites" || category === "Games/4Fun" ? (
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {categories.get(category).map(repo => (
-                <Card repo={repo} category={category} />
-              ))}
-            </div>
-          ) : (
-            <div>
-              {categories.get(category).map(repo => (
-                <Card repo={repo} category={category} />
-              ))}
-            </div>
-          )}
+        <div>
+          <SectionHeading title={category} />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {categories.get(category).map(repo => (
+              <Card repo={repo} category={category} />
+            ))}
+          </div>
         </div>
       ))}
     </main>
