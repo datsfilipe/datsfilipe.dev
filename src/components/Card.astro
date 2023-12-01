@@ -1,31 +1,73 @@
 ---
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-const { repo, category } = Astro.props;
+import { FaExternalLinkAlt } from 'react-icons/fa';
+const { repo } = Astro.props;
+
+let image = null
+
+if (repo.homepageUrl !== null && repo.homepageUrl !== "") {
+  image = await fetch(repo.homepageUrl)
+    .then(res => res.text())
+    .then(text => {
+      const match = text.match(/og:image" content="(.+?)"/)
+      return match ? match[1] : null;
+    });
+}
+
+if (image === null || image === undefined) {
+  image = await fetch(repo.url)
+    .then(res => res.text())
+    .then(text => {
+      const match = text.match(/og:image" content="(.+?)"/)
+      return match ? match[1] : null;
+    });
+}
+
+const date = new Date(repo.defaultBranchRef.target.history.nodes[0].committedDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+})
 ---
-{category === "Websites" || category === "Games/4Fun" ? (
-  <div>
-    <a href={repo.url} target="_blank" rel="noopener noreferrer">
-      <h3>{repo.name}</h3>
-      <p>{repo.description}</p>
-    </a>
-    <a href={repo.homepageUrl} target="_blank" rel="noopener noreferrer">
-      <FaExternalLinkAlt />
-    </a>
-    <span>{
-      repo.defaultBranchRef.target.history.nodes[0].committedDate
-    }</span>
-  </div>
-) : (
-  <div>
-    <a href={repo.url} target="_blank" rel="noopener noreferrer">
-      <h3>{repo.name}</h3>
-      <p>{repo.description}</p>
-    </a>
-    <a href={repo.homepageUrl} target="_blank" rel="noopener noreferrer">
-      <FaGithub />
-    </a>
-    <span>{
-      repo.defaultBranchRef.target.history.nodes[0].committedDate
-    }</span>
-  </div>
-)}
+<div class="flex flex-col space-y-4 pb-10">
+  <a href={repo.url} target="_blank" rel="noopener noreferrer">
+    <h3
+      class="text-md font-bold bg-stone-600 w-fit px-4 py-2"
+    >{repo.name}</h3>
+  </a>
+  <a href={repo.homepageUrl} target="_blank" rel="noopener noreferrer">
+    <div
+      class:list={[
+        "relative",
+        "w-full",
+        "max-h-[12rem]",
+        "overflow-hidden",
+        "after:content-['']",
+        "after:block",
+        "after:h-full",
+        "after:w-full",
+        "after:absolute",
+        "after:top-0",
+        "after:shadow-card-inner",
+        "[&:hover>span]:mb-6",
+        "[&:hover>span>span]:flex",
+        "rounded-lg",
+      ]}
+    >
+      <img
+        src={image}
+        alt={repo.name}
+        loading="eager"
+        width="100%"
+      />
+      <span class="flex items-center space-x-2 absolute bottom-0 right-0 m-4 text-xl z-10 transition-all">
+        <FaExternalLinkAlt /><span class="hidden text-sm font-medium transition-all">Visit Page</span>
+      </span>
+    </div>
+  </a>
+  <p class="text-justify pt-4 text-neutral-300">
+    {repo.description}
+  </p>
+  <span class="text-sm font-medium">
+    ~{date}
+  </span>
+</div>
