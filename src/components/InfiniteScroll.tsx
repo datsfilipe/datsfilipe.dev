@@ -60,9 +60,6 @@ export default function InfiniteScroll ({ repositories }: InfiniteScrollProps): 
     }
   }, [])
 
-  console.log(lastElementRef.current?.innerHTML)
-  console.log(data.length)
-
   return (
     <>
       {data.map((item, index) => {
