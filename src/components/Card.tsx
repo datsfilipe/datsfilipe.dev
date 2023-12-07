@@ -35,7 +35,7 @@ export default function Card ({ repo }: CardProps): ReactElement {
       let newImage = null
 
       if (repo.homepageUrl !== null && repo.homepageUrl !== '') {
-        newImage = await fetch(repo.homepageUrl)
+        newImage = await fetch('https://corsproxy.io/?' + repo.homepageUrl, requestOptions)
           .then(async res => await res.text())
           .then(text => {
             const match = text.match(/og:image" content="(.+?)"/)
@@ -44,7 +44,7 @@ export default function Card ({ repo }: CardProps): ReactElement {
       }
 
       if (newImage === null || newImage === undefined) {
-        newImage = await fetch(repo.url)
+        newImage = await fetch('https://corsproxy.io/?' + repo.url, requestOptions)
           .then(async res => await res.text())
           .then(text => {
             const match = text.match(/og:image" content="(.+?)"/)
