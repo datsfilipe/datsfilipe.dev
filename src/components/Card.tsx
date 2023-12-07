@@ -34,6 +34,13 @@ export default function Card ({ repo }: CardProps): ReactElement {
     const getImage = async (): Promise<void> => {
       let newImage = null
 
+      const requestOptions = {
+        method: 'GET',
+        headers: {
+          'Cache-Control': 'public, max-age=86400' // 24 hours
+        }
+      }
+
       if (repo.homepageUrl !== null && repo.homepageUrl !== '') {
         newImage = await fetch('https://corsproxy.io/?' + repo.homepageUrl, requestOptions)
           .then(async res => await res.text())
@@ -87,12 +94,12 @@ export default function Card ({ repo }: CardProps): ReactElement {
             ? (
             <img
               src={image?.src ?? ''}
-              alt={repo.name}
+              alt={image?.alt ?? ''}
             />
               )
             : (
               <div className="flex items-center justify-center w-full h-48 bg-stone-800">
-                <span className="text-sm text-neutral-300">Error getting image</span>
+                <span className="text-sm text-neutral-300">Loading... or there&apos;s a problem</span>
               </div>
               )
           }
