@@ -21,18 +21,23 @@ interface CardProps {
   }
 }
 
-type ImageObject = {
+interface ImageObject {
   src: string
   alt: string
   loading: boolean
-} | null
+  error: boolean | string
+}
+
+type OptionalImageObject = Partial<ImageObject>
 
 export default function Card ({ repo }: CardProps): ReactElement {
-  const [image, setImage] = useState<ImageObject>(null)
+  const [image, setImage] = useState<OptionalImageObject>({})
 
   useEffect(() => {
     const getImage = async (): Promise<void> => {
-      let newImage = null
+      let newImage: OptionalImageObject = {
+        loading: false
+      }
 
       const requestOptions = {
         method: 'GET',
@@ -68,8 +73,9 @@ export default function Card ({ repo }: CardProps): ReactElement {
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    getImage()
+    getImage().catch(error => {
+      console.error(error)
+    })
   }, [])
 
   const date = new Date(repo.defaultBranchRef.target.history.nodes[0].committedDate).toLocaleDateString('en-US', {
@@ -89,8 +95,7 @@ export default function Card ({ repo }: CardProps): ReactElement {
         <div
           className="relative w-full max-h-[12rem] overflow-hidden after:content-[''] after:block after:h-full after:w-full after:absolute after:top-0 after:shadow-card-inner [&:hover>span]:mb-6 [&:hover>span>span]:flex rounded-lg"
         >
-          {/* eslint-disable-next-line */}
-          {image?.loading
+          {image?.loading === true
             ? (
             <img
               src={image?.src ?? ''}
