@@ -1,0 +1,24 @@
+{
+  viewer {
+    repositories(first: 100, orderBy: { field: STARGAZERS, direction: ASC }) {
+      nodes {
+        name
+        url
+        description
+        homepageUrl
+        updatedAt
+        defaultBranchRef {
+          target {
+            ... on Commit {
+              history(first: 1) {
+                nodes {
+                  committedDate
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
