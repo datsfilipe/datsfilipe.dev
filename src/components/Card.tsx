@@ -47,30 +47,54 @@ export default function Card ({ repo }: CardProps): ReactElement {
       }
 
       if (repo.homepageUrl !== null && repo.homepageUrl !== '') {
-        newImage = await fetch('https://corsproxy.io/?' + repo.homepageUrl, requestOptions)
-          .then(async res => await res.text())
-          .then(text => {
-            const match = text.match(/og:image" content="(.+?)"/)
-            return (match != null) ? match[1] : null
-          })
+        try {
+          await fetch('https://corsproxy.io/?' + repo.homepageUrl, requestOptions)
+            .then(async res => await res.text())
+            .then(text => {
+              const match = text.match(/og:image" content="(.+?)"/)
+              if (match != null) {
+                newImage = {
+                  src: match[1] as string,
+                  alt: repo.name,
+                  loading: true
+                }
+              }
+            })
+        } catch (error) {
+          newImage = {
+            src: '',
+            alt: '',
+            loading: false,
+            error: 'Error fetching source'
+          }
+        }
       }
 
-      if (newImage === null || newImage === undefined) {
-        newImage = await fetch('https://corsproxy.io/?' + repo.url, requestOptions)
-          .then(async res => await res.text())
-          .then(text => {
-            const match = text.match(/og:image" content="(.+?)"/)
-            return (match != null) ? match[1] : null
-          })
+      if (newImage.loading === false && repo.url !== null && repo.url !== '') {
+        try {
+          await fetch('https://corsproxy.io/?' + repo.url, requestOptions)
+            .then(async res => await res.text())
+            .then(text => {
+              const match = text.match(/og:image" content="(.+?)"/)
+              if (match != null) {
+                newImage = {
+                  src: match[1] as string,
+                  alt: repo.name,
+                  loading: true
+                }
+              }
+            })
+        } catch (error) {
+          newImage = {
+            src: '',
+            alt: '',
+            loading: false,
+            error: 'Error fetching source'
+          }
+        }
       }
 
-      if (newImage !== undefined && newImage !== null) {
-        setImage({
-          src: newImage,
-          alt: repo.name,
-          loading: true
-        })
-      }
+      setImage(newImage)
     }
 
     getImage().catch(error => {
@@ -104,7 +128,9 @@ export default function Card ({ repo }: CardProps): ReactElement {
               )
             : (
               <div className="flex items-center justify-center w-full h-48 bg-stone-800">
-                <span className="text-sm text-neutral-300">Loading... or there&apos;s a problem</span>
+                <span className="text-sm text-neutral-300">
+                  {image?.error ?? 'Loading...'}
+                </span>
               </div>
               )
           }
