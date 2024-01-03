@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, type ReactNode, cloneElement } from 'react'
+import { useState, useEffect, useRef, type ReactNode } from 'react'
 import Card from './Card'
 
 interface InfiniteScrollProps {
@@ -18,10 +18,9 @@ interface InfiniteScrollProps {
       }
     }
   }>
-  children?: ReactNode
 }
 
-export default function InfiniteScroll ({ repositories, children }: InfiniteScrollProps): ReactNode {
+export default function InfiniteScroll ({ repositories }: InfiniteScrollProps): ReactNode {
   const [data, setData] = useState<InfiniteScrollProps['repositories']>(repositories.slice(0, 1))
   const lastElementRef = useRef<HTMLDivElement>(null)
   const [loading, setLoading] = useState(false)
