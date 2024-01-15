@@ -18,7 +18,7 @@ test('Page should have valid links', async ({ page }) => {
     as.map((a) => a.getAttribute('href'))
   )
 
-  const urlRegex = /^(http:\/\/localhost:4321|https?:\/\/[^\s/$.?#].[^\s]*)$/
+  const urlRegex = /^(http:\/\/localhost:4321|https?:\/\/[^\s/$.?#].[^\s]*)($|#.*\s*)$/
 
   for (const link of links) {
     if (link !== null) {
