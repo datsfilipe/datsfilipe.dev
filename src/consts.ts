@@ -7,6 +7,9 @@ export const BOOKS = ['Clean Code - Robert C. Martin', 'Metamorphosis - Franz Ka
 export const HOBBIES = ['Linux customization', 'gaming', 'reading', 'coding']
 export const FRONT_STACK = ['TypeScript', 'React', 'JavaScript', 'Next.js', 'Tailwind', 'Vite', 'Astro']
 export const BACK_STACK = ['Node.js', 'Go', 'Express', 'PostgreSQL', 'GraphQL', 'Prisma', 'SQL']
+export const GET_COMMENT_STRING = (username: string, link: string): string => {
+  return `Reading ${link} by ${username}%0A%0AI think... `
+}
 export const SOCIAL = [
   {
     link: 'https://github.com/datsfilipe',
