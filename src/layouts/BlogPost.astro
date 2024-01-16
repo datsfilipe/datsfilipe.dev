@@ -14,11 +14,6 @@ const { title, summary, publishedAt, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={summary} image={heroImage}/>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-      integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous"
-    >
 	</head>
 	<body>
 		<Header title={SITE_TITLE}/>
