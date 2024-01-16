@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import vercel from "@astrojs/vercel/static";
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
@@ -9,30 +9,42 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeKatex from 'rehype-katex';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://datsfilipe.dev',
-  output: 'static',
+  site: "https://datsfilipe.dev",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
     },
   }),
-  integrations: [mdx({
-    extendMarkdownConfig: true
-  }), sitemap(), react(), tailwind()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+    mdx({ extendMarkdownConfig: true }),
+  ],
   markdown: {
+    remarkPlugins: [
+      remarkMath,
+    ],
+    rehypePlugins: [
+      rehypeKatex,
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings, {
+          behavior: 'wrap',
+          properties: {
+            className: ['anchor']
+          }
+        }
+      ]
+    ],
     shikiConfig: {
       theme: 'min-dark',
-      wrap: true
+      wrap: true,
     },
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex, rehypeSlug, [rehypeAutolinkHeadings, {
-      behavior: 'wrap',
-      properties: {
-        className: ['anchor']
-      }
-    }]],
-    gfm: true
+    gfm: true,
   },
+  scopedStyleStrategy: "where",
 });
